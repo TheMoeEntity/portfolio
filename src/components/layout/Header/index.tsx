@@ -22,12 +22,12 @@ const Header = () => {
 
   return (
     <header className="text-white body-font">
-      <div className="container mx-auto items-center flex py-7 px-3 md:flex-row">
+      <div className="container mx-auto items-center flex py-7 px-3 md:flex-row xl:px-8">
         <Link
           className="flex title-font font-medium text-white mb-4 md:mb-0 pr-4"
           href="/"
         >
-          <span className="ml-3 text-2xl md:text-3xl">{"<MOE />"}</span>
+          <span className="text-2xl md:text-3xl">{"<MOE />"}</span>
         </Link>
 
         {/* Hamburger / X Icon */}

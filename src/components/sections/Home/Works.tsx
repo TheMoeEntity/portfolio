@@ -10,6 +10,8 @@ import nosrati from "../../../app/images/nosrati.png";
 import konstruct from "../../../app/images/konstruct.png";
 import moestores from "../../../app/images/moestores.png";
 import tribu from "../../../app/images/tribu-hotel.png";
+import pepnops from "../../../app/images/pepnops-inc.png";
+import aman from "../../../app/images/aman-awards.png";
 
 const projects = [
   {
@@ -73,6 +75,22 @@ const projects = [
     title: "Apple Stores",
     description: "",
   },
+  {
+    type: "real-world",
+    link: "https://pepnops.com",
+    image: pepnops,
+    title: "PEPNOPS Inc.",
+    description:
+      "At Pepnops, Our product and services help streamline processes, remove administrative burdens, and pave your pathway to success.",
+  },
+  {
+    type: "side",
+    link: "https://aman-awards.vercel.app/",
+    image: aman,
+    title: "AMAN Awards",
+    description:
+      "The AMAN Awards, presented by the Artiste Managers Association in Nigeria (AMAN) is an annual event that recognizes and celebrates exceptional talents within the creative industries.",
+  },
 ];
 
 export default function Works() {
@@ -121,7 +139,7 @@ export default function Works() {
       </motion.div>
 
       {/* Projects Grid */}
-      <div className="w-full flex flex-col gap-10 mt-20">
+      <div className="w-full container mx-auto max-w-6xl flex flex-col gap-10 mt-20 xl:p-12">
         {filteredProjects.map((project, index) => (
           <motion.div
             key={index}
