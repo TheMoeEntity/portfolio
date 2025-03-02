@@ -83,7 +83,11 @@ const Hero = () => {
               {word}
             </motion.span>
           ))}
-          <Typewriter text="frontend-heavy full-stack developer" delay={50} />
+          <Typewriter
+            repeatOnView={false}
+            text="frontend-heavy full-stack developer"
+            delay={50}
+          />
           {" based in Lagos, Nigeria, working with clients and teams from all over the world. I specialize in building "
             .split(" ")
             .map((word, index) => (
@@ -96,6 +100,7 @@ const Hero = () => {
               </motion.span>
             ))}
           <Typewriter
+            repeatOnView={false}
             text="beautiful, responsive, and high-performance web applications"
             delay={50}
           />
@@ -110,7 +115,11 @@ const Hero = () => {
                 {word}
               </motion.span>
             ))}
-          <Typewriter text="frontend technologies" delay={50} />
+          <Typewriter
+            text="frontend technologies"
+            repeatOnView={false}
+            delay={50}
+          />
           {" and a solid foundation in ".split(" ").map((word, index) => (
             <motion.span
               key={index}
@@ -120,7 +129,11 @@ const Hero = () => {
               {word}
             </motion.span>
           ))}
-          <Typewriter text="backend development" delay={50} />
+          <Typewriter
+            repeatOnView={false}
+            text="backend development"
+            delay={50}
+          />
           {", I bring ideas to life by combining "
             .split(" ")
             .map((word, index) => (
@@ -133,6 +146,7 @@ const Hero = () => {
               </motion.span>
             ))}
           <Typewriter
+            repeatOnView={false}
             text="clean code, modern tools, and creative problem-solving"
             delay={50}
           />
@@ -157,7 +171,7 @@ const Hero = () => {
           </p>
           <div className="flex flex-col gap-10 w-full">
             <motion.div
-              className="text-2xl gap-7 items-center flex mt-2 "
+              className="text-lg md:text-2xl gap-7 items-center flex mt-2 "
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -173,14 +187,7 @@ const Hero = () => {
               </span>
               <b>OF WRITING CODE</b>
             </motion.div>
-            {/* <motion.p
-              className="text-2xl uppercase font-medium"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              & (helping) building products for brands like:
-            </motion.p> */}
+
             <div>
               <Brands />
             </div>

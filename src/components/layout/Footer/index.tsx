@@ -1,4 +1,4 @@
-import { Linkedin, Instagram, Youtube, Palette } from "lucide-react"; // Assuming you're using Lucide icons
+import { Linkedin, Instagram, Twitter } from "lucide-react"; // Assuming you're using Lucide icons
 import Link from "next/link";
 
 export const Footer = () => {
@@ -63,7 +63,7 @@ export const Footer = () => {
             </p>
             <div className="flex space-x-6">
               <a
-                href="https://www.linkedin.com/in/olamide-famojuro-3b47a7185?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                href="https://www.linkedin.com/in/nwigberi-moses"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#14AFF1] transition-colors"
@@ -71,7 +71,7 @@ export const Footer = () => {
                 <Linkedin size={24} />
               </a>
               <a
-                href="https://www.youtube.com/@henry__fame"
+                href="https://www.instagram.com/nc_moses"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#14AFF1] transition-colors"
@@ -79,20 +79,12 @@ export const Footer = () => {
                 <Instagram size={24} />
               </a>
               <a
-                href="https://www.youtube.com/@henry__fame"
+                href="https://www.x.com/NMoses_"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#14AFF1] transition-colors"
               >
-                <Youtube size={24} />
-              </a>
-              <a
-                href="https://henryfame.artstation.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-[#14AFF1] transition-colors"
-              >
-                <Palette size={24} />
+                <Twitter size={24} />
               </a>
             </div>
           </div>
