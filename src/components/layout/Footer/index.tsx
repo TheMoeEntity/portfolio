@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#121212] text-gray-300 py-12">
+    <footer className="text-gray-300 border-[#ffffff1a] border-t-[0.5px] py-12">
       <div className="container mx-auto px-4">
         {/* Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -11,9 +11,8 @@ export const Footer = () => {
           <div className="space-y-4">
             <h2 className="text-2xl font-bold text-white">MOSES NWIGBERI</h2>
             <p className="text-gray-400">
-              Bringing characters to life through expert modeling, sculpting,
-              and animation. Specializing in ZBrush, human anatomy, and creating
-              stunning visuals for games, cinematics, and 3D prints.
+              Welcome to my realm of pixels and code! {`I'm`} Moe, a fullstack
+              developer with a fiery passion for Next.js, Typescript and iOS
             </p>
           </div>
 
@@ -103,8 +102,11 @@ export const Footer = () => {
         <div className="border-t border-gray-800 my-8"></div>
 
         {/* Copyright */}
-        <div className="text-center text-gray-500">
-          <p>&copy; {new Date().getFullYear()} MOE. All rights reserved.</p>
+        <div className="text-center uppercase text-gray-500">
+          <p>
+            &copy; {new Date().getFullYear()} MOE. all of the rights, all of the
+            riiiiights reserved
+          </p>
         </div>
       </div>
     </footer>

@@ -18,7 +18,7 @@ const Header = () => {
           className="flex title-font font-medium text-white mb-4 md:mb-0 pr-4"
           href="/"
         >
-          <span className="ml-3 text-2xl md:text-3xl">MOSES NWIGBERI</span>
+          <span className="ml-3 text-2xl md:text-3xl">{"<MOE />"}</span>
         </Link>
 
         {/* Hamburger / X Icon */}
