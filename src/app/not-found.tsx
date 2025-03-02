@@ -24,7 +24,7 @@ const NotFound = () => {
     },
   };
   return (
-    <section className="container min-h-96 lg:mt-10 mx-auto lg:px-4 lg:py-4">
+    <section className="container min-h-96 lg:mt-10 p mx-auto px-4 lg:py-4">
       <motion.div
         initial="hidden"
         animate="visible"

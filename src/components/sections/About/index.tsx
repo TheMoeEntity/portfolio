@@ -10,7 +10,7 @@ const About = () => {
     >
       <p className="text-2xl md:text-4xl font-medium">
         {` I've`} spent the last decade building digital wonders for tech,
-        e-commerce, and finance companies—because who{` doesn’t`} love a good
+        e-commerce, and medical companies—because who{` doesn’t`} love a good
         challenge? From crafting pixel-perfect UIs to wrestling with backend
         APIs, {`I've`} done it all. My superpower? Turning coffee into clean,
         maintainable code (mostly TypeScript, because{" "}
