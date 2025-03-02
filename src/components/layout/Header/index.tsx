@@ -10,6 +10,15 @@ const Header = () => {
   const toggleNavbar = () => {
     setNavbarOpen(!navbarOpen);
   };
+  const goToSection = (sectionName: string) => {
+    const section = document.getElementById(sectionName);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 10,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <header className="text-white body-font">
@@ -77,62 +86,42 @@ const Header = () => {
             >
               <div className="container justify-center items-center flex flex-col h-full mx-auto p-5">
                 <nav className="flex flex-col items-center justify-center space-y-6 text-center">
-                  <Link
-                    className="text-2xl hover:text-[#14AFF1]"
-                    href="/"
-                    onClick={toggleNavbar}
+                  <button
+                    onClick={() => {
+                      toggleNavbar();
+                      goToSection("works");
+                    }}
+                    className="mr-6 hover:text-[#14AFF1]"
                   >
-                    Home
-                  </Link>
-                  <Link
-                    className="text-2xl hover:text-[#14AFF1]"
-                    href="/about"
-                    onClick={toggleNavbar}
+                    Work
+                  </button>
+                  <button
+                    onClick={() => {
+                      toggleNavbar();
+                      goToSection("about");
+                    }}
+                    className="mr-6 hover:text-[#14AFF1]"
                   >
                     About
-                  </Link>
-                  <Link
-                    className="text-2xl hover:text-[#14AFF1]"
-                    href="/characters"
-                    onClick={toggleNavbar}
+                  </button>
+                  <button
+                    onClick={() => {
+                      toggleNavbar();
+                      goToSection("services");
+                    }}
+                    className="mr-6 hover:text-[#14AFF1]"
                   >
-                    Characters
-                  </Link>
-                  <Link
-                    className="text-2xl hover:text-[#14AFF1]"
-                    href="/animated-films"
-                    onClick={toggleNavbar}
-                  >
-                    Animated Films
-                  </Link>
-                  <Link
-                    className="text-2xl hover:text-[#14AFF1]"
-                    href="/projects"
-                    onClick={toggleNavbar}
-                  >
-                    Products
-                  </Link>
-                  <Link
-                    className="text-2xl hover:text-[#14AFF1]"
-                    href="/projects"
-                    onClick={toggleNavbar}
-                  >
-                    Tutorials
-                  </Link>
-                  <Link
-                    className="text-2xl hover:text-[#14AFF1]"
-                    href="/contact"
-                    onClick={toggleNavbar}
-                  >
-                    Contact
-                  </Link>
+                    Services
+                  </button>
                 </nav>
-                <button
+                <a
+                  href="/docs/Moe-resume.pdf"
+                  download="Moses Nwigberi's Resume.pdf"
                   className="w-fit mt-8 px-4 py-2 bg-[#14AFF1] text-white font-semibold rounded-lg hover:bg-[#0F8AC0] transition-colors"
                   onClick={toggleNavbar}
                 >
                   Download Resume
-                </button>
+                </a>
               </div>
             </motion.div>
           )}
@@ -141,18 +130,28 @@ const Header = () => {
         {/* Desktop Navigation */}
         <div className="md:flex flex-grow items-center hidden">
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center font-semibold pl-7">
-            <Link className="mr-6 hover:text-[#14AFF1]" href="/about">
+            <button
+              onClick={() => goToSection("works")}
+              className="mr-6 hover:text-[#14AFF1]"
+            >
               Work
-            </Link>
-            <Link className="mr-6 hover:text-[#14AFF1]" href="/characters">
+            </button>
+            <button
+              onClick={() => goToSection("about")}
+              className="mr-6 hover:text-[#14AFF1]"
+            >
               About
-            </Link>
-            <Link className="mr-6 hover:text-[#14AFF1]" href="/animated-films">
-              Portfolio
-            </Link>
-            <Link className="mr-6 hover:text-[#14AFF1]" href="/contact">
+            </button>
+            <button
+              onClick={() => goToSection("services")}
+              className="mr-6 hover:text-[#14AFF1]"
+            >
+              Services
+            </button>
+            {/* <button className="mr-6 hover:text-[#14AFF1]">
               Contact
-            </Link>
+              Contact
+            </button> */}
           </nav>
           <a
             href="/docs/Moe-resume.pdf"

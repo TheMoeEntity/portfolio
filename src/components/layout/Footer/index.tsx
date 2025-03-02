@@ -1,7 +1,17 @@
+"use client";
 import { Linkedin, Instagram, Twitter } from "lucide-react"; // Assuming you're using Lucide icons
-import Link from "next/link";
+// import Link from "next/link";
 
 export const Footer = () => {
+  const goToSection = (sectionName: string) => {
+    const section = document.getElementById(sectionName);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 10,
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <footer className="text-gray-300 border-[#ffffff1a] border-t-[0.5px] py-12">
       <div className="container mx-auto px-4">
@@ -21,37 +31,37 @@ export const Footer = () => {
             <h3 className="text-xl font-bold text-white">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link
-                  href="/about"
+                <button
+                  onClick={() => goToSection("about")}
                   className="hover:text-[#14AFF1] transition-colors"
                 >
                   About Me
-                </Link>
+                </button>
               </li>
               <li>
-                <a
-                  href="#portfolio"
+                <button
+                  onClick={() => goToSection("works")}
                   className="hover:text-[#14AFF1] transition-colors"
                 >
                   Portfolio
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#experience"
+                <button
+                  onClick={() => goToSection("services")}
                   className="hover:text-[#14AFF1] transition-colors"
                 >
-                  Experience
-                </a>
+                  Services
+                </button>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/contact"
                   className="hover:text-[#14AFF1] transition-colors"
                 >
                   Contact
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 

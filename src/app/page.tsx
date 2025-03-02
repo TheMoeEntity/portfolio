@@ -4,7 +4,7 @@ import Works from "@/components/sections/Home/Works";
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-4 pb-20 font-[family-name:var(--font-geist-sans)]">
+    <main className="min-h-screen p-5 pb-20 font-[family-name:var(--font-geist-sans)]">
       <Hero />
       <Works />
       <About />

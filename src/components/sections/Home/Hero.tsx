@@ -194,7 +194,7 @@ const Hero = () => {
           </div>
         </article>
         <div className="text-right md:text-left">
-          <b>Services:</b>
+          <b id="services">Services:</b>
           <ul className="m-0 p-0 gap-0 text-[16px]">
             {services.map((service, index) => (
               <motion.li

@@ -83,7 +83,10 @@ export default function Works() {
   );
 
   return (
-    <section className="w-full relative gap-10 pt-32 pb-10 container mx-auto">
+    <section
+      id="works"
+      className="w-full relative gap-10 pt-32 pb-10 container mx-auto"
+    >
       <h1 className="text-4xl md:text-7xl lg:text-9xl text-center mb-16">
         Works
       </h1>

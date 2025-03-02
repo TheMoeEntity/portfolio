@@ -4,7 +4,10 @@ import React from "react";
 
 const About = () => {
   return (
-    <section className="container flex flex-col gap-10 mt-20 mx-auto max-w-6xl md:p-3">
+    <section
+      id="about"
+      className="container flex flex-col gap-10 mt-20 mx-auto max-w-6xl md:p-3"
+    >
       <p className="text-2xl md:text-4xl font-medium">
         {` I've`} spent the last decade building digital wonders for tech,
         e-commerce, and finance companies—because who{` doesn’t`} love a good
