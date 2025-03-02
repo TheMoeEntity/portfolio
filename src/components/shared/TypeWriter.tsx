@@ -19,7 +19,7 @@ export const Typewriter = ({
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && repeatOnView) {
             // Start typing when in view
             setCurrentText("");
             setCurrentIndex(0);
