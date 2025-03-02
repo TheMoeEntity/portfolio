@@ -154,9 +154,13 @@ const Header = () => {
               Contact
             </Link>
           </nav>
-          <button className="px-4 bg-[#14AFF1] py-2 mt-2 text-sm font-semibold text-white transition duration-500 ease-in-out transform rounded-lg md:mt-0 md:ml-4 hover:bg-[#0F8AC0] focus:outline-none focus:shadow-outline">
+          <a
+            href="/docs/Moe-resume.pdf"
+            download="Moses Nwigberi's Resume.pdf"
+            className="px-4 bg-[#14AFF1] py-2 mt-2 text-sm font-semibold text-white transition duration-500 ease-in-out transform rounded-lg md:mt-0 md:ml-4 hover:bg-[#0F8AC0] focus:outline-none focus:shadow-outline"
+          >
             Download Resume
-          </button>
+          </a>
         </div>
       </div>
     </header>
