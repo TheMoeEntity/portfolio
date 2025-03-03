@@ -17,13 +17,15 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Moses Chukwudi's Portfolio | Web Developer & Engineer",
   description:
-    "Welcome to the online portfolio of Moses Chukwudi Nwigberi, a passionate web developer and chemical engineering student. Explore projects, skills, and professional experiences.",
+    "Welcome to the online portfolio of Moses Chukwudi Nwigberi, a passionate web developer and chemical engineering student based in Lagos, Nigeria. Explore projects, skills, and professional experiences.",
   authors: {
     name: "Moses Chukwudi Nwigberi",
     url: "https://codewithmoe.vercel.app",
   },
+  creator: "Moses Chukwudi Nwigberi",
+  applicationName: "Moe's Portfolio",
   keywords:
-    "Moses Chukwudi, web developer, portfolio, chemical engineering, software developer, full-stack developer, Next.js, TypeScript, Tailwind, projects",
+    "Moses Chukwudi Nwigberi, Moses Nwigberi, web developer, portfolio, chemical engineering, software developer, full-stack developer, Next.js, TypeScript, Tailwind, projects",
   robots: "index, follow",
   openGraph: {
     type: "website",

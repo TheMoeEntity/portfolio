@@ -12,6 +12,7 @@ import moestores from "../../../app/images/moestores.png";
 import tribu from "../../../app/images/tribu-hotel.png";
 import pepnops from "../../../app/images/pepnops-inc.png";
 import aman from "../../../app/images/aman-awards.png";
+import farzad from "../../../app/images/farzads-blog.png";
 // import simulator from "../../../app/images/Airtimplus-simulator.png";
 
 const projects = [
@@ -33,14 +34,6 @@ const projects = [
   },
   {
     type: "real-world",
-    link: "https://dovehospital.com",
-    image: dovehospital,
-    title: "Dove Hospital",
-    description:
-      "Dove Hospital is a medical center that provides healthcare services to patients.",
-  },
-  {
-    type: "real-world",
     image: nosrati,
     link: "https://nosratilawgroup.com",
     title: "Nosratilaw Group",
@@ -56,27 +49,6 @@ const projects = [
       "ZStinger Inspections prioritizes client satisfaction and technological excellence by providing efficient aerial assessments across various industries.",
   },
   {
-    type: "side",
-    link: "https://tribu-hotel.vercel.app",
-    image: tribu,
-    title: "Tribu-Hotel Redesign",
-    description: "",
-  },
-  {
-    type: "side",
-    link: "https://mkonstruct.vercel.app",
-    image: konstruct,
-    title: "Konstruct",
-    description: "",
-  },
-  {
-    type: "side",
-    link: "https://moestores.vercel.app",
-    image: moestores,
-    title: "Apple Stores",
-    description: "",
-  },
-  {
     type: "real-world",
     link: "https://pepnops.com",
     image: pepnops,
@@ -85,12 +57,52 @@ const projects = [
       "At Pepnops, Our product and services help streamline processes, remove administrative burdens, and pave your pathway to success.",
   },
   {
+    type: "real-world",
+    link: "https://onedivinesingularity.com",
+    image: farzad,
+    title: "One Divine Singularity",
+    description:
+      "A blog website (with a secure admin panel) that showcases Farzad Nosrati's book— One Divine Singularity.",
+  },
+  {
+    type: "real-world",
+    link: "https://dovehospital.com",
+    image: dovehospital,
+    title: "Dove Hospital",
+    description:
+      "Dove Hospital is a medical center that provides healthcare services to patients. The website has been up since 2018, but it's currently 'on a break' because someone forgot to renew the hosting. Don't worry, it's not a medical emergency—just a digital one!",
+  },
+  {
+    type: "side",
+    link: "https://tribu-hotel.vercel.app",
+    image: tribu,
+    title: "Tribu-Hotel Redesign",
+    description:
+      "My graphic design friend and I decided to give Tribu-Hotel's website a glow-up because, let's be honest, the original UI was... well, let's just say it needed some love. We sent them our redesign, and they said, 'We'll get back to you.' That was about a month ago. Still waiting. Maybe they're on vacation?",
+  },
+  {
+    type: "side",
+    link: "https://mkonstruct.vercel.app",
+    image: konstruct,
+    title: "Konstruct",
+    description:
+      "I was bored at home, scrolling through beautiful templates online, and stumbled upon this gem. Naturally, I recreated it in Next.js because why not? It's got some really cool animations that make me feel like a frontend wizard. 🧙‍♂️✨",
+  },
+  {
+    type: "side",
+    link: "https://moestores.vercel.app",
+    image: moestores,
+    title: "Apple Stores",
+    description:
+      "This one was a blast to work on! It was originally for an assessment test for a frontend developer job I applied for. I poured my heart and soul into it, but for some *mysterious* reason, I wasn't selected. Yeah, I'm as shocked as you are. Their loss, though—this project is 🔥.",
+  },
+  {
     type: "side",
     link: "https://aman-awards.vercel.app/",
     image: aman,
     title: "AMAN Awards",
     description:
-      "The AMAN Awards, presented by the Artiste Managers Association in Nigeria (AMAN) is an annual event that recognizes and celebrates exceptional talents within the creative industries.",
+      "The AMAN Awards celebrate exceptional talents in Nigeria's creative industries. I moved this to the side projects because, apparently, they forgot to renew their domain subscription. Guess they were too busy celebrating to pay the bills.",
   },
 ];
 
@@ -112,7 +124,7 @@ export default function Works() {
 
       {/* Filter Buttons */}
       <motion.div
-        className="text-2xl top-20 md:right-10 md:rotate-12 gap-7 items-center flex mt-2 justify-center md:justify-start md:absolute"
+        className="text-2xl top-20 md:right-10 md:rotate-12 gap-4 items-center flex mt-2 mb-5 justify-center md:justify-start md:absolute"
         initial={{ opacity: 0, y: 20, x: -20 }}
         whileInView={{ opacity: 1, y: 0, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
