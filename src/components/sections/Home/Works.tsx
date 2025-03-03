@@ -12,6 +12,7 @@ import moestores from "../../../app/images/moestores.png";
 import tribu from "../../../app/images/tribu-hotel.png";
 import pepnops from "../../../app/images/pepnops-inc.png";
 import aman from "../../../app/images/aman-awards.png";
+// import simulator from "../../../app/images/Airtimplus-simulator.png";
 
 const projects = [
   {
@@ -105,7 +106,7 @@ export default function Works() {
       id="works"
       className="w-full relative gap-10 pt-32 pb-10 container mx-auto"
     >
-      <h1 className="text-4xl md:text-7xl lg:text-9xl text-center mb-16">
+      <h1 className="text-4xl md:text-7xl lg:text-9xl text-center mb-8">
         Works
       </h1>
 
@@ -113,7 +114,7 @@ export default function Works() {
       <motion.div
         className="text-2xl top-20 md:right-10 md:rotate-12 gap-7 items-center flex mt-2 justify-center md:justify-start md:absolute"
         initial={{ opacity: 0, y: 20, x: -20 }}
-        whileInView={{ opacity: 1, y: 0, x: 0, rotateX: 5, rotateY: 20 }}
+        whileInView={{ opacity: 1, y: 0, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <button
@@ -139,7 +140,42 @@ export default function Works() {
       </motion.div>
 
       {/* Projects Grid */}
-      <div className="w-full container mx-auto max-w-6xl flex flex-col gap-10 mt-20 xl:p-12">
+
+      <div className="w-full container mx-auto max-w-6xl flex flex-col gap-10 xl:p-12">
+        {/* <motion.div
+          // key={index}
+          className="w-full flex flex-col gap-10"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <motion.div
+            className="relative w-full h-auto overflow-hidden rounded-lg"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Image
+              src={simulator}
+              alt={""}
+              // width={1200}
+              // height={800}
+              quality={100}
+              className="object-contain w-full h-auto"
+            />
+          </motion.div>
+          <div className="w-full flex flex-col gap-5">
+            <a
+              href={`project.link`}
+              target="_BLANK"
+              className="text-3xl w-fit hover:underline"
+            >
+              {`project.title`}
+            </a>
+            <p className="text-gray-600 dark:text-gray-300">
+              {`project.description`}
+            </p>
+          </div>
+        </motion.div> */}
         {filteredProjects.map((project, index) => (
           <motion.div
             key={index}
