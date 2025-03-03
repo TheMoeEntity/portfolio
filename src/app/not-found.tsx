@@ -47,12 +47,12 @@ const NotFound = () => {
         </motion.h1>
         <br></br>
         <motion.p
-          className="font-normal leading-relaxed text-gray-600 dark:text-gray-300 lg:w-2/3"
+          className="font-normal mt-5 leading-relaxed text-gray-600 dark:text-gray-300 lg:w-2/3"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          {"The page you are looking for doesn't exist or has been moved."
+          {"The page you are looking for doesn't exist or has been moved and you've wandered into the big ol' digital void."
             .split(" ")
             .map((word, index) => (
               <motion.span
@@ -66,11 +66,19 @@ const NotFound = () => {
         </motion.p>
       </motion.div>
       <p className="mt-20 font-normal">
-        But we can take you to a page that 100% exists. <br />
+        We can take you to a page that 100% exists (if you wish,lol). <br />
         <Link href="/" className="font-bold">
           Back home↗{" "}
         </Link>
       </p>
+      <motion.p
+        className="text-gray-400 my-8"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.8, duration: 0.5 }}
+      >
+        Or just enjoy the void. {`It's `}pretty cozy here. 🛸
+      </motion.p>
     </section>
   );
 };
