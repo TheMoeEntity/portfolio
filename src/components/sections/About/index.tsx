@@ -21,6 +21,10 @@ const About = () => {
         Tailwind CSS is the best thing since sliced bread, you’ll find me
         outdoors chasing my kids around, pretending to be a FIFA pro (spoiler:
         I’m not), or binge-reading frontend blogs to stay ahead of the curve.
+        And if there’s a Barcelona match on, drop everything—I’ll be glued to
+        the screen, cheering on the Blaugrana and dreaming of the day I can
+        watch Yamal’s magic live at Camp Nou or estadio mon-juice (or whatever
+        they’re calling it now).
       </p>
       <p className="md:text-3xl font-normal text-gray-300">
         I’ve had the privilege of working with brands both in Nigeria and the
