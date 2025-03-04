@@ -55,7 +55,7 @@ const Hero = () => {
           variants={containerVariants}
           className="mb-2 text-6xl font-bold tracking-tighter text-white lg:text-8xl md:text-7xl"
         >
-          {"Building Digital Experiences, One Line of Code at a Time"
+          {"Crafting Digital Experiences, One Arrow Function at a Time"
             .split(" ")
             .map((word, index) => (
               <motion.span

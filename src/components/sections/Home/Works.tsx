@@ -124,27 +124,27 @@ export default function Works() {
 
       {/* Filter Buttons */}
       <motion.div
-        className="text-2xl top-20 md:right-10 md:rotate-12 gap-4 items-center flex mt-2 mb-5 justify-center md:justify-start md:absolute"
+        className="text-2xl w-fit mx-auto rounded-full py-2 bg-[#1B191A] top-20 md:right-10 md:rotate-12 gap-4 items-center flex mt-2 mb-5 justify-center md:justify-start md:absolute"
         initial={{ opacity: 0, y: 20, x: -20 }}
         whileInView={{ opacity: 1, y: 0, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <button
           onClick={() => setFilter("real-world")}
-          className={`px-4 py-2 md:text-xl text-sm rounded-lg transition-colors duration-300 ${
+          className={`px-6 py-2 md:text-xl text-sm rounded-full transition-colors duration-700 ${
             filter === "real-world"
               ? "bg-[#14AFF1] text-white"
-              : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              : "bg-transparent text-white"
           }`}
         >
-          Real World Projects
+          For Brands
         </button>
         <button
           onClick={() => setFilter("side")}
-          className={`px-4 py-2 md:text-xl text-sm rounded-lg transition-colors duration-300 ${
+          className={`px-6 py-2 md:text-xl text-sm rounded-full transition-colors duration-700 ${
             filter === "side"
               ? "bg-[#14AFF1] text-white"
-              : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              : "bg-transparent text-white"
           }`}
         >
           Side Projects

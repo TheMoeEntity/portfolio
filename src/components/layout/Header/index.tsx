@@ -89,6 +89,15 @@ const Header = () => {
                   <button
                     onClick={() => {
                       toggleNavbar();
+                      goToSection("services");
+                    }}
+                    className="mr-6 hover:text-[#14AFF1]"
+                  >
+                    Services
+                  </button>
+                  <button
+                    onClick={() => {
+                      toggleNavbar();
                       goToSection("works");
                     }}
                     className="mr-6 hover:text-[#14AFF1]"
@@ -103,15 +112,6 @@ const Header = () => {
                     className="mr-6 hover:text-[#14AFF1]"
                   >
                     About
-                  </button>
-                  <button
-                    onClick={() => {
-                      toggleNavbar();
-                      goToSection("services");
-                    }}
-                    className="mr-6 hover:text-[#14AFF1]"
-                  >
-                    Services
                   </button>
                 </nav>
                 <a
@@ -131,6 +131,12 @@ const Header = () => {
         <div className="md:flex flex-grow items-center hidden">
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center font-semibold pl-7">
             <button
+              onClick={() => goToSection("services")}
+              className="mr-6 hover:text-[#14AFF1]"
+            >
+              Services
+            </button>
+            <button
               onClick={() => goToSection("works")}
               className="mr-6 hover:text-[#14AFF1]"
             >
@@ -141,12 +147,6 @@ const Header = () => {
               className="mr-6 hover:text-[#14AFF1]"
             >
               About
-            </button>
-            <button
-              onClick={() => goToSection("services")}
-              className="mr-6 hover:text-[#14AFF1]"
-            >
-              Services
             </button>
             {/* <button className="mr-6 hover:text-[#14AFF1]">
               Contact
