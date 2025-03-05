@@ -19,8 +19,9 @@ const Header = () => {
       });
     }
   };
-  const text = "<MOE />"; // Text to animate
-  const letters = text.split(""); // Split text into individual letters
+  // const text = "<MOE />"; // Text to animate
+  // const letters = text.split(""); // Split text into individual letters
+  const letters = ["<", "M", "O", "E ", "‎ ", "/", ">"];
 
   // Variants for staggered drop animation
   const containerVariants = {
@@ -139,6 +140,15 @@ const Header = () => {
                   <button
                     onClick={() => {
                       toggleNavbar();
+                      goToSection("testimonials");
+                    }}
+                    className="mr-6 hover:text-[#14AFF1]"
+                  >
+                    Testimonials
+                  </button>
+                  <button
+                    onClick={() => {
+                      toggleNavbar();
                       goToSection("about");
                     }}
                     className="mr-6 hover:text-[#14AFF1]"
@@ -173,6 +183,12 @@ const Header = () => {
               className="mr-6 hover:text-[#14AFF1]"
             >
               Work
+            </button>
+            <button
+              onClick={() => goToSection("testimonials")}
+              className="mr-6 hover:text-[#14AFF1]"
+            >
+              Testimonials
             </button>
             <button
               onClick={() => goToSection("about")}

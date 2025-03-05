@@ -5,7 +5,7 @@ import { Linkedin, Instagram, Twitter, Github } from "lucide-react"; // Assuming
 export const Footer = () => {
   return (
     <footer className="text-gray-300 w-full border-[#ffffff1a] border-t-[0.5px] pt-12 pb-5">
-      <div className="container w-full mx-auto px-4">
+      <div className="container w-full max-w-6xl mx-auto px-4">
         {/* Footer Content */}
         <div className="flex flex-wrap gap-y-10 w-full justify-between">
           {/* About Section */}

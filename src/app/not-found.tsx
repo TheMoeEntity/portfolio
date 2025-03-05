@@ -38,7 +38,7 @@ const NotFound = () => {
   const y = useTransform(scrollY, [0, 500], [0, -100]); // Adjust the range for desired effect
 
   return (
-    <section className="container font-[family-name:var(--font-geist-sans)] relative min-h-[700px] md:min-h-[650px] lg:mt-10 p mx-auto px-4 lg:py-4">
+    <section className="container max-w-6xl font-[family-name:var(--font-geist-sans)] relative min-h-[700px] md:min-h-[650px] lg:mt-10 p mx-auto px-4 lg:py-4">
       {/* Floating Card */}
       <motion.div
         style={{ y }} // Apply parallax effect here

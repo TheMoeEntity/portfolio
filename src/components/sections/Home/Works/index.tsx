@@ -2,17 +2,17 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import airtimeplus from "../../../app/images/airtimeplus.png";
-import greencal from "../../../app/images/greencal-updated.png";
-import dovehospital from "../../../app/images/dovehospital.png";
-import zstinger from "../../../app/images/zstinger.png";
-import nosrati from "../../../app/images/nosrati.png";
-import konstruct from "../../../app/images/konstruct.png";
-import moestores from "../../../app/images/moestores.png";
-import tribu from "../../../app/images/tribu-hotel.png";
-import pepnops from "../../../app/images/pepnops-inc.png";
-import aman from "../../../app/images/aman-awards.png";
-import farzad from "../../../app/images/farzads-blog.png";
+import airtimeplus from "../../../../app/images/airtimeplus.png";
+import greencal from "../../../../app/images/greencal-updated.png";
+import dovehospital from "../../../../app/images/dovehospital.png";
+import zstinger from "../../../../app/images/zstinger.png";
+import nosrati from "../../../../app/images/nosrati.png";
+import konstruct from "../../../../app/images/konstruct.png";
+import moestores from "../../../../app/images/moestores.png";
+import tribu from "../../../../app/images/tribu-hotel.png";
+import pepnops from "../../../../app/images/pepnops-inc.png";
+import aman from "../../../../app/images/aman-awards.png";
+import farzad from "../../../../app/images/farzads-blog.png";
 // import simulator from "../../../app/images/Airtimplus-simulator.png";
 
 const projects = [
@@ -118,7 +118,7 @@ export default function Works() {
       id="works"
       className="w-full relative gap-10 pt-32 pb-10 container mx-auto"
     >
-      <h1 className="text-4xl md:text-7xl lg:text-9xl text-center mb-8">
+      <h1 className="text-6xl md:text-7xl lg:text-9xl text-center mb-8">
         Works
       </h1>
 
