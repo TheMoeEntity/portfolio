@@ -14,16 +14,15 @@ import pepnops from "../../../../app/images/pepnops-inc.png";
 import aman from "../../../../app/images/aman-awards.png";
 import farzad from "../../../../app/images/farzads-blog.png";
 // import simulator from "../../../app/images/Airtimplus-simulator.png";
-
+const airtimeplusBeta = {
+  link: "https://beta.airtimeplus.ng",
+  type: "real-world",
+  image: airtimeplus,
+  title: "Airtimeplus Beta",
+  description:
+    "Airtimeplus Beta is a Progressive Web Application that allows users to buy airtime, data, and pay bills online. No signs ups required.",
+};
 const projects = [
-  {
-    link: "https://beta.airtimeplus.ng",
-    type: "real-world",
-    image: airtimeplus,
-    title: "Airtimeplus Beta",
-    description:
-      "Airtimeplus Beta is a web application that allows users to buy airtime, data, and pay bills online.",
-  },
   {
     type: "real-world",
     link: "https://greencalfoundation.com",
@@ -38,7 +37,7 @@ const projects = [
     link: "https://nosratilawgroup.com",
     title: "Nosratilaw Group",
     description:
-      "Nosratilaw Group is a law firm that provides legal services to clients.",
+      "Nosrati Law Group is a Beverly Hills based client-centered practice specializing in estate planning",
   },
   {
     type: "real-world",
@@ -153,77 +152,80 @@ export default function Works() {
 
       {/* Projects Grid */}
 
-      <div className="w-full container mx-auto max-w-6xl flex flex-col gap-10 xl:p-12">
-        {/* <motion.div
-          // key={index}
-          className="w-full flex flex-col gap-10"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
+      <div className="w-full container mx-auto max-w-6xl xl:p-12">
+        {filter === "real-world" && (
           <motion.div
-            className="relative w-full h-auto overflow-hidden rounded-lg"
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.3 }}
-          >
-            <Image
-              src={simulator}
-              alt={""}
-              // width={1200}
-              // height={800}
-              quality={100}
-              className="object-contain w-full h-auto"
-            />
-          </motion.div>
-          <div className="w-full flex flex-col gap-5">
-            <a
-              href={`project.link`}
-              target="_BLANK"
-              className="text-3xl w-fit hover:underline"
-            >
-              {`project.title`}
-            </a>
-            <p className="text-gray-600 dark:text-gray-300">
-              {`project.description`}
-            </p>
-          </div>
-        </motion.div> */}
-        {filteredProjects.map((project, index) => (
-          <motion.div
-            key={index}
-            className="w-full flex flex-col gap-10"
+            className="w-full mb-10 flex flex-col gap-10"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            transition={{ duration: 0.5, delay: 0 * 0.1 }}
           >
             <motion.div
-              className="relative w-full h-auto overflow-hidden rounded-lg"
+              className="relative p-3 bg-[#1B191A] md:p-10 lg:p-16 w-full h-auto overflow-hidden rounded-lg"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
               <Image
-                src={project.image}
-                alt={project.title}
+                src={airtimeplusBeta.image}
+                alt={airtimeplusBeta.title}
                 // width={1200}
                 // height={800}
                 quality={100}
-                className="object-contain w-full h-auto"
+                className="object-contain w-full h-auto rounded-lg"
               />
             </motion.div>
             <div className="w-full flex flex-col gap-5">
               <a
-                href={project.link}
+                href={airtimeplusBeta.link}
                 target="_BLANK"
                 className="text-3xl w-fit hover:underline"
               >
-                {project.title}
+                {airtimeplusBeta.title}
               </a>
               <p className="text-gray-600 dark:text-gray-300">
-                {project.description}
+                {airtimeplusBeta.description}
               </p>
             </div>
           </motion.div>
-        ))}
+        )}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10">
+          {filteredProjects.map((project, index) => (
+            <motion.div
+              key={index}
+              className="w-full flex flex-col gap-10"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <motion.div
+                className="relative p-3 bg-[#1B191A] md:p-5 w-full h-auto overflow-hidden rounded-lg"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  // width={1200}
+                  // height={800}
+                  quality={100}
+                  className="object-contain w-full h-auto rounded-lg"
+                />
+              </motion.div>
+              <div className="w-full flex flex-col gap-5">
+                <a
+                  href={project.link}
+                  target="_BLANK"
+                  className="text-3xl w-fit hover:underline"
+                >
+                  {project.title}
+                </a>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {project.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
