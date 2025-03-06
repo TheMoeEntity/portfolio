@@ -1,6 +1,11 @@
 import About from "@/components/sections/About";
 import Hero from "@/components/sections/Home/Hero";
-import Testimonials from "@/components/sections/Home/Testimonials";
+import dynamic from "next/dynamic";
+
+const Testimonials = dynamic(
+  () => import("@/components/sections/Home/Testimonials"),
+  { ssr: false }
+);
 import Works from "@/components/sections/Home/Works";
 
 export default function Home() {
