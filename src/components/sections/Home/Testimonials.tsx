@@ -70,23 +70,23 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 }) => {
   // Apply spring smoothing to mouseX and mouseY with unique stiffness and damping
   const smoothMouseX = useSpring(mouseX, {
-    stiffness: 100,
-    damping: index % 2 === 0 ? 40 : 20, // Alternate damping for different speeds
+    stiffness: 300, // Increased stiffness for faster response
+    damping: 20, // Reduced damping for less delay
   });
   const smoothMouseY = useSpring(mouseY, {
-    stiffness: 100,
-    damping: index % 2 === 0 ? 40 : 20, // Alternate damping for different speeds
+    stiffness: 300, // Increased stiffness for faster response
+    damping: 20, // Reduced damping for less delay
   });
 
   // Reduce the range of movement for a slower effect
   const x = useTransform(
     smoothMouseX,
-    [-300, 300],
+    [-window.innerWidth / 2, window.innerWidth / 2],
     index % 2 === 0 ? [-10, 10] : [-15, 15] // Different ranges for different speeds
   );
   const y = useTransform(
     smoothMouseY,
-    [-300, 300],
+    [-window.innerHeight / 2, window.innerHeight / 2],
     index % 2 === 0 ? [-10, 10] : [-15, 15] // Different ranges for different speeds
   );
 
@@ -108,7 +108,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       style={{ x, y }}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.2, duration: 0.5 }}
+      transition={{ delay: index * 0.2, duration: 0.7 }}
     >
       <div className="flex gap-3 items-center">
         <div
@@ -136,11 +136,9 @@ const Testimonials: React.FC = () => {
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      if (containerRef.current) {
-        const rect = containerRef.current.getBoundingClientRect();
-        mouseX.set(e.clientX - rect.left - rect.width / 2);
-        mouseY.set(e.clientY - rect.top - rect.height / 2);
-      }
+      // Track mouse position relative to the viewport
+      mouseX.set(e.clientX - window.innerWidth / 2);
+      mouseY.set(e.clientY - window.innerHeight / 2);
     };
 
     window.addEventListener("mousemove", handleMouseMove);
