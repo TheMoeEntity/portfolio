@@ -3,7 +3,7 @@ import React, { ReactNode, useEffect, useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import dynamic from "next/dynamic";
-import { ThemeProvider } from "@material-tailwind/react";
+import { ThemeProvider } from "@/context/ThemeContext";
 const Cursor = dynamic(() => import("../shared/CustomCusor"), {
   ssr: false,
 });
