@@ -12,7 +12,12 @@ body {
   color: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
-
+.fixedClass {
+  width: fit-content;
+  margin: 20px auto;
+  border-radius: 9999px;
+  background: #242223 !important;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

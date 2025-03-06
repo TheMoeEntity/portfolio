@@ -45,7 +45,7 @@ const testimonials: Testimonial[] = [
     role: "Fellow Developer",
     position: {
       x: "left-[35%]",
-      y: "bottom-[20px]",
+      y: "bottom-[10px]",
     },
     text: `He’s the only person I know who can make Tailwind CSS sound like a stand-up comedy routine. His passion for clean code is matched only by his love for  <b class="text-[#C4C4C4]">Barcelona</b>.  <b class="text-[#C4C4C4]">Visca el Barça!</b>`,
   },
@@ -55,7 +55,7 @@ const testimonials: Testimonial[] = [
     profile: "bright.png",
     position: {
       x: "right-[130px]",
-      y: "bottom-[140px]",
+      y: "bottom-[120px]",
     },
     text: `I hired him to build my <b class="text-[#C4C4C4]">startup website</b>, and I ended up with a <b class="text-[#C4C4C4]">masterpiece</b>.`,
   },
