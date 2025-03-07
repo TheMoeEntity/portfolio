@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Brands } from "../Brands";
 import years from "../../../app/images/years.png";
 import Image from "next/image";
+import { useTheme } from "@/context/ThemeContext";
 const Hero = () => {
   const services = [
     "Frontend Development",
@@ -43,6 +44,7 @@ const Hero = () => {
       transition: { type: "spring", stiffness: 100, damping: 12 },
     },
   };
+  const { theme } = useTheme();
   return (
     <section className="container lg:mt-10 mx-auto lg:px-4 lg:py-4">
       <motion.div
@@ -53,7 +55,7 @@ const Hero = () => {
       >
         <motion.h1
           variants={containerVariants}
-          className="mb-2 text-6xl font-bold tracking-tighter text-white lg:text-8xl md:text-7xl"
+          className={`mb-2 text-6xl font-bold tracking-tighter ${theme === "light" ? "text-[#110f10]" : "text-white"} lg:text-8xl md:text-7xl`}
         >
           {"Crafting Digital Experiences, One Arrow Function at a Time"
             .split(" ")
@@ -68,8 +70,9 @@ const Hero = () => {
             ))}
         </motion.h1>
         <br></br>
+
         <motion.p
-          className="font-normal leading-relaxed text-gray-600 dark:text-gray-300 lg:w-2/3"
+          className="font-normal leading-relaxed text-gray-500 dark:text-gray-300 lg:w-2/3"
           variants={containerVariants}
           initial="hidden"
           animate="visible"

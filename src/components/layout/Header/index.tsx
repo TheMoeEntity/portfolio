@@ -3,12 +3,19 @@
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "@/context/ThemeContext";
+import { Download } from "lucide-react";
 
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   const toggleNavbar = () => {
     setNavbarOpen(!navbarOpen);
+  };
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
   };
   const goToSection = (sectionName: string) => {
     const section = document.getElementById(sectionName);
@@ -38,11 +45,14 @@ const Header = () => {
     hidden: { opacity: 0, y: -50 }, // Start above
     visible: { opacity: 1, y: 0 }, // Drop to original position
   };
+  const { theme } = useTheme();
   return (
-    <header className="text-white body-font">
+    <header
+      className={`${theme === "light" ? "text-[#110f10]" : "text-white"}  body-font`}
+    >
       <div className="container mx-auto items-center flex py-7 px-3 md:flex-row xl:px-8">
         <Link
-          className="flex title-font font-medium text-white mb-4 md:mb-0 pr-4"
+          className="flex title-font font-medium mb-4 md:mb-0 pr-4"
           href="/"
         >
           <motion.span
@@ -156,14 +166,15 @@ const Header = () => {
                     About
                   </button>
                 </nav>
-                <a
-                  href="/docs/Moe-resume.pdf"
-                  download="Moses Nwigberi's Resume.pdf"
-                  className="w-fit mt-8 px-4 py-2 bg-[#14AFF1] text-white font-semibold rounded-lg hover:bg-[#0F8AC0] transition-colors"
-                  onClick={toggleNavbar}
+                <button
+                  className="w-fit px-4 mt-8 py-2 bg-[#14AFF1] text-white font-semibold rounded-lg hover:bg-[#0F8AC0] transition-colors"
+                  onClick={() => {
+                    toggleModal();
+                    toggleNavbar();
+                  }}
                 >
-                  Download Resume
-                </a>
+                  View Resume
+                </button>
               </div>
             </motion.div>
           )}
@@ -201,14 +212,78 @@ const Header = () => {
               Contact
             </button> */}
           </nav>
-          <a
-            href="/docs/Moe-resume.pdf"
-            download="Moses Nwigberi's Resume.pdf"
-            className="px-4 bg-[#14AFF1] py-2 mt-2 text-sm font-semibold text-white transition duration-500 ease-in-out transform rounded-lg md:mt-0 md:ml-4 hover:bg-[#0F8AC0] focus:outline-none focus:shadow-outline"
+          <button
+            className="w-fit px-4 py-2 bg-[#14AFF1] text-white font-semibold rounded-lg hover:bg-[#0F8AC0] transition-colors"
+            onClick={() => {
+              toggleModal();
+            }}
           >
-            Download Resume
-          </a>
+            View Resume
+          </button>
         </div>
+
+        {/* Modal for CV */}
+        <AnimatePresence>
+          {isModalOpen && (
+            <motion.div
+              className="fixed inset-0 bg-black bg-opacity-70 z-[999999] flex justify-center items-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <motion.div
+                className="bg-[#121212] rounded-lg py-6 px-2 w-full max-w-3xl max-h-[95vh] overflow-y-auto"
+                initial={{ scale: 0.8 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.8 }}
+              >
+                <div className="flex px-5 justify-between items-center mb-4">
+                  <h2 className="text-2xl font-semibold">
+                    {" "}
+                    Moses Nwigberi&#39;s Resume
+                  </h2>
+                  <button
+                    className="text-white hover:text-[#14AFF1]"
+                    onClick={toggleModal}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="feather feather-x"
+                    >
+                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                  </button>
+                </div>
+                <div className="h-[70vh] overflow-y-auto">
+                  {/* Embed your CV here */}
+                  <iframe
+                    src="/docs/Moe-resume.pdf"
+                    className="w-full h-full"
+                    frameBorder="0"
+                  ></iframe>
+                </div>
+                <div className="mt-2 flex justify-end">
+                  <a
+                    href="/docs/Moe-resume.pdf"
+                    download="Moses Nwigberi's Resume.pdf"
+                    className="w-fit mt-8 px-4 py-2 font-semibold rounded-lg transition-colors"
+                  >
+                    <Download color="#14AFF1" />
+                  </a>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );
