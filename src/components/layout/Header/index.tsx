@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "@/context/ThemeContext";
-import { Download } from "lucide-react";
+import { Download, Menu } from "lucide-react";
 
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
@@ -55,7 +55,9 @@ const Header = () => {
           className="flex title-font font-medium mb-4 md:mb-0 pr-4"
           href="/"
         >
-          {"<MOE />"}
+          <span className="text-3xl">
+            {"MOE"} <span className="text-[#14AFF1] pl-1">{"/>"}</span>{" "}
+          </span>
           {/* <motion.span
             className="text-2xl md:text-3xl"
             variants={containerVariants}
@@ -76,7 +78,7 @@ const Header = () => {
 
         {/* Hamburger / X Icon */}
         <button
-          className={`text-white ${navbarOpen && "fixed right-5 top-10"} cursor-pointer z-[51] text-xl leading-none py-1 border border-solid border-transparent  rounded bg-transparent block md:hidden outline-none focus:outline-none ml-auto pb-3`}
+          className={`text-white ${navbarOpen && "fixed right-5 top-0"} cursor-pointer z-[51] text-2xl leading-none border border-solid border-transparent  rounded bg-transparent block md:hidden outline-none focus:outline-none ml-auto pb-3`}
           type="button"
           onClick={toggleNavbar}
         >
@@ -99,22 +101,7 @@ const Header = () => {
             </svg>
           ) : (
             // Hamburger Icon
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="white"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="feather feather-menu"
-            >
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
+            <Menu size={"30px"} />
           )}
         </button>
 
