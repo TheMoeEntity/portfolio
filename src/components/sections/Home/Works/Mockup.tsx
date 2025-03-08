@@ -21,7 +21,7 @@ const ParallaxMockup = ({
   const ref = useRef(null);
   const isMobile = useClientMediaQuery("(max-width: 600px)");
   const isMD = useClientMediaQuery("(max-width: 880px)");
-  const multiplier = isMD ? 0.6 : isMobile ? 0.27 : 0.7;
+  const multiplier = isMobile ? 0.27 : isMD ? 0.6 : 0.7;
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"], // Adjusts how it reacts to scrolling
