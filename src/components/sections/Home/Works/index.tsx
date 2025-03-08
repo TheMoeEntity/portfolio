@@ -13,7 +13,8 @@ import tribu from "../../../../app/images/tribu-hotel.png";
 import pepnops from "../../../../app/images/pepnops-inc.png";
 import aman from "../../../../app/images/aman-awards.png";
 import farzad from "../../../../app/images/farzads-blog.png";
-// import simulator from "../../../app/images/Airtimplus-simulator.png";
+import simulator from "../../../../app/images/ATPB.png";
+import ParallaxMockup from "./Mockup";
 const airtimeplusBeta = {
   link: "https://beta.airtimeplus.ng",
   type: "real-world",
@@ -154,39 +155,10 @@ export default function Works() {
 
       <div className="w-full container mx-auto max-w-6xl xl:p-12">
         {filter === "real-world" && (
-          <motion.div
-            className="w-full mb-10 flex flex-col gap-10"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0 * 0.1 }}
-          >
-            <motion.div
-              className="relative p-3 bg-[#1B191A] md:p-10 lg:p-16 w-full h-auto overflow-hidden rounded-lg"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Image
-                src={airtimeplusBeta.image}
-                alt={airtimeplusBeta.title}
-                // width={1200}
-                // height={800}
-                quality={100}
-                className="object-contain w-full h-auto rounded-lg"
-              />
-            </motion.div>
-            <div className="w-full flex flex-col gap-5">
-              <a
-                href={airtimeplusBeta.link}
-                target="_BLANK"
-                className="text-3xl w-fit hover:underline"
-              >
-                {airtimeplusBeta.title}
-              </a>
-              <p className="text-gray-600 dark:text-gray-300">
-                {airtimeplusBeta.description}
-              </p>
-            </div>
-          </motion.div>
+          <ParallaxMockup
+            simulator={simulator}
+            airtimeplusBeta={airtimeplusBeta}
+          />
         )}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10">
           {filteredProjects.map((project, index) => (
@@ -205,8 +177,6 @@ export default function Works() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  // width={1200}
-                  // height={800}
                   quality={100}
                   className="object-contain w-full h-auto rounded-lg"
                 />

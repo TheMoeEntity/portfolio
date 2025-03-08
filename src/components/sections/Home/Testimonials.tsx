@@ -82,12 +82,12 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   const x = useTransform(
     smoothMouseX,
     [-window.innerWidth / 2, window.innerWidth / 2],
-    index % 2 === 0 ? [-10, 10] : [-15, 15] // Different ranges for different speeds
+    index % 2 === 0 ? [-10, 10] : [-30, 30] // Different ranges for different speeds
   );
   const y = useTransform(
     smoothMouseY,
     [-window.innerHeight / 2, window.innerHeight / 2],
-    index % 2 === 0 ? [-10, 10] : [-15, 15] // Different ranges for different speeds
+    index % 2 === 0 ? [-10, 10] : [-30, 30] // Different ranges for different speeds
   );
 
   const imageStyles: CSSProperties = {
