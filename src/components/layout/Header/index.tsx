@@ -28,23 +28,23 @@ const Header = () => {
   };
   // const text = "<MOE />"; // Text to animate
   // const letters = text.split(""); // Split text into individual letters
-  const letters = ["<", "M", "O", "E ", "‎ ", "/", ">"];
+  // const letters = ["<", "M", "O", "E ", "‎ ", "/", ">"];
 
   // Variants for staggered drop animation
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.45, // Delay between each letter
-      },
-    },
-  };
+  // const containerVariants = {
+  //   hidden: { opacity: 0 },
+  //   visible: {
+  //     opacity: 1,
+  //     transition: {
+  //       staggerChildren: 0.45, // Delay between each letter
+  //     },
+  //   },
+  // };
 
-  const letterVariants = {
-    hidden: { opacity: 0, y: -50 }, // Start above
-    visible: { opacity: 1, y: 0 }, // Drop to original position
-  };
+  // const letterVariants = {
+  //   hidden: { opacity: 0, y: -50 }, // Start above
+  //   visible: { opacity: 1, y: 0 }, // Drop to original position
+  // };
   const { theme } = useTheme();
   return (
     <header
@@ -55,7 +55,8 @@ const Header = () => {
           className="flex title-font font-medium mb-4 md:mb-0 pr-4"
           href="/"
         >
-          <motion.span
+          {"<MOE />"}
+          {/* <motion.span
             className="text-2xl md:text-3xl"
             variants={containerVariants}
             initial="hidden"
@@ -70,7 +71,7 @@ const Header = () => {
                 {letter}
               </motion.span>
             ))}
-          </motion.span>
+          </motion.span> */}
         </Link>
 
         {/* Hamburger / X Icon */}
