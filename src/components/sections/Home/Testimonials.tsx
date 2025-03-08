@@ -54,8 +54,8 @@ const testimonials: Testimonial[] = [
     role: "Startup Founder at PEPNOPS inc",
     profile: "bright.png",
     position: {
-      x: "right-[130px]",
-      y: "bottom-[120px]",
+      x: "xl:right-[130px] md:right-0",
+      y: "xl:bottom-[120px] md:bottom-[230px]",
     },
     text: `I hired him to build my <b class="text-[#C4C4C4]">startup website</b>, and I ended up with a <b class="text-[#C4C4C4]">masterpiece</b>.`,
   },

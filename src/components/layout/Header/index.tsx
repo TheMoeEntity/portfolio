@@ -50,7 +50,7 @@ const Header = () => {
     <header
       className={`${theme === "light" ? "text-[#110f10]" : "text-white"}  body-font`}
     >
-      <div className="container mx-auto items-center flex py-7 px-3 md:flex-row xl:px-8">
+      <div className="container mx-auto items-center flex py-7 px-5 md:flex-row xl:px-8">
         <Link
           className="flex title-font font-medium mb-4 md:mb-0 pr-4"
           href="/"

@@ -124,7 +124,7 @@ export default function Works() {
 
       {/* Filter Buttons */}
       <motion.div
-        className="text-2xl w-fit mx-auto rounded-full py-2 bg-[#1B191A] top-20 md:right-10 md:rotate-12 gap-4 items-center flex mt-2 mb-5 justify-center md:justify-start md:absolute"
+        className="text-2xl w-fit mx-auto my-10 my=0 rounded-full py-2 bg-[#1B191A] top-20 xl:right-10 lg:rotate-12 gap-4 items-center flex mt-2 mb-5 justify-center xl:justify-start xl:absolute"
         initial={{ opacity: 0, y: 20, x: -20 }}
         whileInView={{ opacity: 1, y: 0, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
