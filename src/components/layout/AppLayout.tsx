@@ -33,7 +33,7 @@ const AppLayout = (props: Props) => {
   }, []);
   return (
     <div
-      className={`transition-colors ease duration-500 ${theme === "light" ? "bg-white text-[#110f10]" : "bg-[#110f10] text-[#ffffff]"}`}
+      className={`transition-colors ease duration-500 ${theme === "light" ? "bg-[#F6F7FB] text-[#110f10]" : "bg-[#110f10] text-[#ffffff]"}`}
     >
       {/* Scroll Progress Bar */}
       <div
