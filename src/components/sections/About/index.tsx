@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="container flex flex-col gap-10 mt-20 mx-auto max-w-6xl md:p-3"
+      className="container flex flex-col gap-10 mt-20 mx-auto max-w-5xl md:p-3"
     >
       <p className="text-2xl md:text-4xl font-medium">
         {` I've`} spent the last decade building digital wonders for tech,
@@ -16,7 +16,7 @@ const About = () => {
         maintainable code (mostly TypeScript, because{" "}
         <span className="text-[#14AFF1]">any</span> is not my type).
       </p>
-      <p className="md:text-3xl text-gray-400 font-medium">
+      <p className="md:text-3xl text-[#8D8D8D] font-medium">
         When I’m not geeking out over the latest Next.js feature or debating why
         Tailwind CSS is the best thing since sliced bread, you’ll find me
         outdoors chasing my kids around, pretending to be a FIFA pro (spoiler:
