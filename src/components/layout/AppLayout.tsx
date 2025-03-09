@@ -37,7 +37,7 @@ const AppLayout = (props: Props) => {
     >
       {/* Scroll Progress Bar */}
       <div
-        className="fixed transition-all ease-out duration-100 z-50 top-0 left-0 h-1 bg-[#14AFF1]"
+        className="fixed z-50 top-0 left-0 h-1 bg-[#14AFF1]"
         style={{ width: `${scrollProgress}%` }}
       ></div>
 
