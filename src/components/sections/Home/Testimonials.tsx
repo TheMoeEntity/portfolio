@@ -36,7 +36,7 @@ const testimonials: Testimonial[] = [
     profile: "Syks.png",
     position: {
       x: "left-[50px]",
-      y: "lg:top-[30px] md:top-[190px] -z-1",
+      y: "md:top-10 xl:top-[30px] md:top-[190px] -z-1",
     },
     text: `<b class="text-[#C4C4C4]">Moe</b> is an absolute gem to work with. I often outsource projects to him, and he never disappoints. Together, <b class="text-[#C4C4C4]">we’ve built websites for brands in Nigeria and the US</b>, and the clients are always <b class="text-[#C4C4C4]">thrilled with his work</b>. His expertise in Next.js and Tailwind CSS is unmatched.`,
   },
@@ -44,8 +44,8 @@ const testimonials: Testimonial[] = [
     name: "Moses Nwigberi.",
     role: "Fellow Developer",
     position: {
-      x: "left-[35%]",
-      y: "bottom-[10px]",
+      x: "md:left-10 xl:left-[35%]",
+      y: "md:bottom-0 xl:bottom-[10px]",
     },
     text: `He’s the only person I know who can make Tailwind CSS sound like a stand-up comedy routine. His passion for clean code is matched only by his love for  <b class="text-[#C4C4C4]">Barcelona</b>.  <b class="text-[#C4C4C4]">Visca el Barça!</b>`,
   },
@@ -55,7 +55,7 @@ const testimonials: Testimonial[] = [
     profile: "bright.png",
     position: {
       x: "xl:right-[130px] md:right-0",
-      y: "xl:bottom-[120px] md:bottom-[230px]",
+      y: "xl:bottom-[120px] md:bottom-[120px]",
     },
     text: `I hired him to build my <b class="text-[#C4C4C4]">startup website</b>, and I ended up with a <b class="text-[#C4C4C4]">masterpiece</b>.`,
   },
@@ -149,7 +149,7 @@ const Testimonials: React.FC = () => {
     <div
       id="testimonials"
       ref={containerRef}
-      className="relative mt-20 min-h-screen w-full container mx-auto"
+      className="relative xl:mt-20 min-h-screen md:min-h-[800px] xl:min-h-screen w-full container mx-auto"
     >
       <div className="md:absolute py-10 mb-2 text-center text-4xl font-bold tracking-tighter text-white md:text-6xl top-1/2 left-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
         People Seem to Like Me (Mostly ☻)

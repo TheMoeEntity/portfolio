@@ -65,7 +65,7 @@ const Hero = () => {
           >
             <motion.h1
               variants={containerVariants}
-              className={`mb-2 text-6xl font-bold tracking-tighter ${theme === "light" ? "text-[#110f10]" : "text-white"} lg:text-8xl md:text-7xl`}
+              className={`mb-2 hero-text text-6xl font-bold tracking-tighter ${theme === "light" ? "text-[#110f10]" : "text-white"} lg:text-8xl md:text-7xl`}
             >
               {"Crafting Digital Experiences, One Arrow Function at a Time"
                 .split(" ")
@@ -225,9 +225,9 @@ const Hero = () => {
           </div>
         </div>
       </section>
-      <div className="flex px-1 md:px-5 mt-10 md:flex flex-col gap-10 w-full">
+      <div className="flex px-1 md:px-5 mt-10 md:flex flex-col gap-0 w-full">
         <motion.div
-          className="text-lg justify-center md:text-2xl gap-7 items-center flex mt-2 "
+          className="text-lg justify-center md:text-2xl gap-5 items-center flex mt-2 "
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
