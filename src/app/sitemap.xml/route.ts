@@ -4,7 +4,7 @@ export async function GET() {
   const baseUrl = "https://codewithmoe.vercel.app";
 
   // Define static pages
-  const pages = ["", "/not-found"];
+  const pages = ["/", "/not-found"];
 
   // Generate XML sitemap
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
