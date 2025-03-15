@@ -17,7 +17,18 @@ type Props = {
 const AppLayout = (props: Props) => {
   const { theme } = useTheme();
   const [scrollProgress, setScrollProgress] = useState(0);
-
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollY = window.scrollY;
+  //     if (scrollY > 100) {
+  //       setTheme("dark");
+  //     } else {
+  //       setTheme("light");
+  //     }
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;

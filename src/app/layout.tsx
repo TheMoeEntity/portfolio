@@ -15,9 +15,22 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Moses Chukwudi's Portfolio | Web Developer & Engineer",
+  title: "Moses Chukwud Nwigberi's Portfolio | Web Developer & Engineer",
+  other: {
+    "application/ld+json": JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Moses Chukwudi Nwigberi",
+      url: "https://codewithmoe.vercel.app",
+      jobTitle: "Fullstack Web Developer",
+      worksFor: {
+        "@type": "DITCOSoft Technologies",
+        name: "Freelance",
+      },
+    }),
+  },
   description:
-    "Welcome to the online portfolio of Moses Chukwudi Nwigberi, a passionate web developer and chemical engineering student based in Lagos, Nigeria. Explore projects, skills, and professional experiences.",
+    "Welcome to the online portfolio of Moses Chukwudi Nwigberi, a passionate web developer with a chemical engineering background based in Lagos, Nigeria. Explore projects, skills, and professional experiences.",
   authors: {
     name: "Moses Chukwudi Nwigberi",
     url: "https://codewithmoe.vercel.app",
@@ -33,7 +46,7 @@ export const metadata: Metadata = {
     description:
       "Explore Moses Chukwudi's web development and engineering projects, showcasing skills and professional work.",
     url: "https://codewithmoe.vercel.app",
-    images: "https://codewithmoe.vercel.app/icon.ico", // Replace with a relevant image URL for Open Graph
+    images: "https://codewithmoe.vercel.app/images/og-image.jpg", // Replace with a relevant image URL for Open Graph
   },
   twitter: {
     card: "summary_large_image",

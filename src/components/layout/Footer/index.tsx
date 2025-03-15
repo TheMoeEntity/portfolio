@@ -15,7 +15,7 @@ export const Footer = () => {
             </h2>
             <p className="text-gray-500">
               {" "}
-              &copy; {new Date().getFullYear()} MOSES NWIGBERI.
+              &copy; {new Date().getFullYear()} MOSES CHUKWUDI NWIGBERI.
             </p>
           </div>
 

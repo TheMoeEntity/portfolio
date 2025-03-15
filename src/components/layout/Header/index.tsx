@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "@/context/ThemeContext";
-import { Download, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
@@ -251,15 +251,14 @@ const Header = () => {
                     </svg>
                   </button>
                 </div>
-                <div className="h-[70vh] overflow-y-auto">
-                  {/* Embed your CV here */}
+                <div className="h-[85vh] overflow-y-auto">
                   <iframe
                     src="/docs/Moe-resume.pdf"
                     className="w-full h-full"
                     frameBorder="0"
                   ></iframe>
                 </div>
-                <div className="mt-2 flex justify-end">
+                {/* <div className="mt-2 flex justify-end">
                   <a
                     href="/docs/Moe-resume.pdf"
                     download="Moses Nwigberi's Resume.pdf"
@@ -267,7 +266,7 @@ const Header = () => {
                   >
                     <Download color="#14AFF1" />
                   </a>
-                </div>
+                </div> */}
               </motion.div>
             </motion.div>
           )}
