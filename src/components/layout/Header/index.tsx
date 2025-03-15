@@ -129,6 +129,15 @@ const Header = () => {
                   <button
                     onClick={() => {
                       toggleNavbar();
+                      goToSection("about");
+                    }}
+                    className="mr-6 hover:text-[#14AFF1]"
+                  >
+                    About
+                  </button>
+                  <button
+                    onClick={() => {
+                      toggleNavbar();
                       goToSection("works");
                     }}
                     className="mr-6 hover:text-[#14AFF1]"
@@ -143,15 +152,6 @@ const Header = () => {
                     className="mr-6 hover:text-[#14AFF1]"
                   >
                     Testimonials
-                  </button>
-                  <button
-                    onClick={() => {
-                      toggleNavbar();
-                      goToSection("about");
-                    }}
-                    className="mr-6 hover:text-[#14AFF1]"
-                  >
-                    About
                   </button>
                 </nav>
                 <button
@@ -178,6 +178,12 @@ const Header = () => {
               Services
             </button>
             <button
+              onClick={() => goToSection("about")}
+              className="mr-6 hover:text-[#14AFF1]"
+            >
+              About
+            </button>
+            <button
               onClick={() => goToSection("works")}
               className="mr-6 hover:text-[#14AFF1]"
             >
@@ -188,12 +194,6 @@ const Header = () => {
               className="mr-6 hover:text-[#14AFF1]"
             >
               Testimonials
-            </button>
-            <button
-              onClick={() => goToSection("about")}
-              className="mr-6 hover:text-[#14AFF1]"
-            >
-              About
             </button>
             {/* <button className="mr-6 hover:text-[#14AFF1]">
               Contact

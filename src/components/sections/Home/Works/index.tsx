@@ -118,9 +118,7 @@ export default function Works() {
       id="works"
       className="w-full relative gap-10 pt-32 pb-10 container mx-auto"
     >
-      <h1 className="text-6xl md:text-7xl lg:text-9xl text-center mb-8">
-        Works
-      </h1>
+      <h1 className="text-5xl md:text-5xl md:ml-5 mb-8">Selected Works</h1>
 
       {/* Filter Buttons */}
       <motion.div
@@ -163,8 +161,8 @@ export default function Works() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10">
           {filteredProjects.map((project, index) => (
             <motion.div
-              key={index}
-              className="w-full flex flex-col gap-10"
+              key={project.title}
+              className={`w-full flex flex-col gap-10 ${index % 2 == 1 && "md:mt-16"}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -189,9 +187,7 @@ export default function Works() {
                 >
                   {project.title}
                 </a>
-                <p className="text-gray-600 dark:text-gray-300">
-                  {project.description}
-                </p>
+                <p className="text-[#F0EDF0] text-sm">{project.description}</p>
               </div>
             </motion.div>
           ))}

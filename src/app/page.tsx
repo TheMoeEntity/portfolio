@@ -7,11 +7,13 @@ const Testimonials = dynamic(
   { ssr: false }
 );
 import Works from "@/components/sections/Home/Works";
+// import Goals from "@/components/sections/Home/Goals";
 
 export default function Home() {
   return (
     <main className="p-5 pb-20 font-[family-name:var(--font-geist-sans)]">
       <Hero />
+      {/* <Goals /> */}
       <Works />
       <Testimonials />
       <About />

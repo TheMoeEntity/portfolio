@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useTheme } from "@/context/ThemeContext";
 import Loader from "@/components/shared/Loader";
 import { useState } from "react";
+import Goals from "./Goals";
 const Hero = () => {
   const services = [
     "Frontend Development",
@@ -98,7 +99,7 @@ const Hero = () => {
               ))}
               <Typewriter
                 repeatOnView={false}
-                text="frontend-heavy full-stack developer"
+                text="full-stack developer"
                 delay={50}
               />
               {" based in Lagos, Nigeria, working with clients and teams from all over the world. I specialize in building "
@@ -225,6 +226,7 @@ const Hero = () => {
           </div>
         </div>
       </section>
+      <Goals />
       <div className="flex px-1 md:px-5 mt-10 md:flex flex-col gap-0 w-full">
         <motion.div
           className="text-lg justify-center md:text-2xl gap-5 items-center flex mt-2 "
