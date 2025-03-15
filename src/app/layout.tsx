@@ -43,18 +43,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     title: "Moses Chukwudi's Portfolio | Fullstack Developer",
+    siteName: "Moe's Portfolio",
     description:
-      "Explore Moses Chukwudi's web development and engineering projects, showcasing skills and professional work.",
+      "Building sleek UIs with Next.js & TypeScript. Explore Moses Chukwudi's web development projects, showcasing skills and professional work.",
     url: "https://codewithmoe.vercel.app",
-    images: "https://codewithmoe.vercel.app/images/og-image.jpg", // Replace with a relevant image URL for Open Graph
+    images: [
+      {
+        url: "https://codewithmoe.vercel.app/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Moses Chukwudi Nwigberi Portfolio",
+      },
+    ], // Replace with a relevant image URL for Open Graph
   },
   twitter: {
     card: "summary_large_image",
     site: "@NMoses_",
     title: "Moses Chukwudi's Portfolio | Web Developer & Engineer",
     description:
-      "Explore Moses Chukwudi's web development and engineering projects, showcasing skills and professional work.",
-    images: "https://codewithmoe.vercel.app/icon.ico", // Replace with a relevant image URL for Twitter Card
+      "Explore Moses Chukwudi's web development projects, showcasing skills and professional work.",
+    images: ["https://codewithmoe.vercel.app/og-image.jpg"], // Replace with a relevant image URL for Twitter Card
   },
 };
 
