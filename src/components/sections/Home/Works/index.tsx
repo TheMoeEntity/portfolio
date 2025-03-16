@@ -118,7 +118,9 @@ export default function Works() {
       id="works"
       className="w-full relative gap-10 pt-32 pb-10 container mx-auto"
     >
-      <h1 className="text-4xl md:text-5xl md:ml-5 mb-8">Selected Works</h1>
+      <h1 className="text-4xl text-center md:text-left md:text-5xl md:ml-5 mb-8">
+        Selected Works
+      </h1>
 
       {/* Filter Buttons */}
       <motion.div
