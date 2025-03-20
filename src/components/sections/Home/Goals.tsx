@@ -1,6 +1,7 @@
 "use client";
 
 import { CircularProgress } from "@/components/shared/UI/CircularProgressBar";
+import Code from "@/components/shared/UI/Code";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { CSSProperties, useEffect, useRef, useState } from "react";
 
@@ -77,6 +78,7 @@ const Goals = () => {
             From Ebonyi, living in Lagos, Nigeria, and working with <br />{" "}
             clients from around the globe.
           </p>
+          <Code />
         </motion.div>
       </motion.div>
 
