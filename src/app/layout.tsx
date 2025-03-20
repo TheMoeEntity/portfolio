@@ -27,6 +27,11 @@ export const metadata: Metadata = {
         "@type": "DITCOSoft Technologies",
         name: "Freelance",
       },
+      sameAs: [
+        "https://www.linkedin.com/in/nwigberi-moses",
+        "https://github.com/TheMoeEntity",
+        "https://twitter.com/NMoses_",
+      ],
     }),
   },
   description:
