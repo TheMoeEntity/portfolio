@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Moses Chukwud Nwigberi's Portfolio | Web Developer & Engineer",
+  title: "Moses Chukwudi Nwigberi's Portfolio | Web Developer & Engineer",
   other: {
     "application/ld+json": JSON.stringify({
       "@context": "https://schema.org",

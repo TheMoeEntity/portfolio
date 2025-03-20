@@ -6,7 +6,7 @@ import {
   MotionValue,
   useSpring,
 } from "framer-motion";
-import { CSSProperties, useEffect, useRef } from "react";
+import { CSSProperties, useEffect, useRef, useState } from "react";
 
 // Define the type for a testimonial
 interface Testimonial {
@@ -133,17 +133,38 @@ const Testimonials: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
+  const [initialPhase, setInitialPhase] = useState(true);
 
   useEffect(() => {
+    // Simulate a subtle oscillation for a few seconds
+    if (initialPhase) {
+      const start = performance.now();
+
+      const animate = (time: number) => {
+        const elapsed = time - start;
+        if (elapsed < 3000) {
+          mouseX.set(Math.sin(elapsed / 500) * 15); // Small oscillation in X
+          mouseY.set(Math.sin(elapsed / 600) * 15); // Small oscillation in Y
+          requestAnimationFrame(animate);
+        } else {
+          setInitialPhase(false); // End initial animation phase
+        }
+      };
+
+      requestAnimationFrame(animate);
+    }
+
+    // Mouse movement takes over after initial animation
     const handleMouseMove = (e: MouseEvent) => {
-      // Track mouse position relative to the viewport
-      mouseX.set(e.clientX - window.innerWidth / 2);
-      mouseY.set(e.clientY - window.innerHeight / 2);
+      if (!initialPhase) {
+        mouseX.set(e.clientX - window.innerWidth / 2);
+        mouseY.set(e.clientY - window.innerHeight / 2);
+      }
     };
 
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, [mouseX, mouseY]);
+  }, [mouseX, mouseY, initialPhase]);
 
   return (
     <div
