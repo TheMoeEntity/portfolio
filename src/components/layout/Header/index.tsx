@@ -48,7 +48,7 @@ const Header = () => {
   const { theme } = useTheme();
   return (
     <header
-      className={`${theme === "light" ? "text-[#110f10]" : "text-white"}  body-font`}
+      className={`font-[family-name:var(--font-geist-sans)] ${theme === "light" ? "text-[#110f10]" : "text-white"}  body-font`}
     >
       <div className="container mx-auto items-center flex py-7 px-5 md:flex-row xl:px-8">
         <Link
@@ -56,7 +56,7 @@ const Header = () => {
           href="/"
         >
           <span className="text-3xl">
-            {"MOE"} <span className="text-[#14AFF1] pl-1">{"/>"}</span>{" "}
+            {"MO.E"} <span className="text-[#14AFF1] pl-1">{"/>"}</span>{" "}
           </span>
           {/* <motion.span
             className="text-2xl md:text-3xl"
@@ -78,7 +78,7 @@ const Header = () => {
 
         {/* Hamburger / X Icon */}
         <button
-          className={`text-white ${navbarOpen && "fixed right-5 top-0"} cursor-pointer z-[51] text-2xl leading-none border border-solid border-transparent  rounded bg-transparent block md:hidden outline-none focus:outline-none ml-auto pb-3`}
+          className={`text-white ${navbarOpen && "fixed right-8 top-12"} cursor-pointer z-[51] text-3xl leading-none border border-solid border-transparent  rounded bg-transparent block md:hidden outline-none focus:outline-none ml-auto pb-3`}
           type="button"
           onClick={toggleNavbar}
         >
@@ -115,54 +115,62 @@ const Header = () => {
               exit={{ y: "100%" }}
               transition={{ type: "spring", stiffness: 150, damping: 18 }}
             >
-              <div className="container justify-center items-center flex flex-col h-full mx-auto p-5">
-                <nav className="flex flex-col items-center justify-center space-y-6 text-center">
-                  <button
-                    onClick={() => {
-                      toggleNavbar();
-                      goToSection("services");
+              <div className="container flex justify-center flex-col h-screen p-8">
+                <nav className="flex flex-col gap-y-6">
+                  {[
+                    "services",
+                    "about",
+                    "works",
+                    "testimonials",
+                    "View Resume",
+                  ].map((section, index) =>
+                    section === "View Resume" ? (
+                      <motion.button
+                        key={section}
+                        className="w-fit text-xl px-4 mt-12 py-2 bg-[#14AFF1] text-white font-semibold rounded-lg hover:bg-[#0F8AC0] transition-colors"
+                        onClick={() => {
+                          toggleModal();
+                          toggleNavbar();
+                        }}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -20 }}
+                        transition={{ delay: index * 0.4, duration: 0.7 }}
+                      >
+                        {section}
+                      </motion.button>
+                    ) : (
+                      <motion.button
+                        key={section}
+                        onClick={() => {
+                          toggleNavbar();
+                          goToSection(section);
+                        }}
+                        className="mr-6 w-fit text-4xl font-medium hover:text-[#14AFF1]"
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -20 }}
+                        transition={{ delay: index * 0.4, duration: 0.7 }}
+                      >
+                        {section.charAt(0).toUpperCase() + section.slice(1)}
+                      </motion.button>
+                    )
+                  )}
+
+                  {/* Floating "MOE" Effect */}
+                  <motion.span
+                    className="text-6xl absolute bottom-3 text-[#DDDDDD] right-4"
+                    initial={{ y: 0 }}
+                    animate={{ y: [0, -5, 0] }}
+                    transition={{
+                      repeat: Infinity,
+                      duration: 2,
+                      ease: "easeInOut",
                     }}
-                    className="mr-6 hover:text-[#14AFF1]"
                   >
-                    Services
-                  </button>
-                  <button
-                    onClick={() => {
-                      toggleNavbar();
-                      goToSection("about");
-                    }}
-                    className="mr-6 hover:text-[#14AFF1]"
-                  >
-                    About
-                  </button>
-                  <button
-                    onClick={() => {
-                      toggleNavbar();
-                      goToSection("works");
-                    }}
-                    className="mr-6 hover:text-[#14AFF1]"
-                  >
-                    Work
-                  </button>
-                  <button
-                    onClick={() => {
-                      toggleNavbar();
-                      goToSection("testimonials");
-                    }}
-                    className="mr-6 hover:text-[#14AFF1]"
-                  >
-                    Testimonials
-                  </button>
+                    MOE
+                  </motion.span>
                 </nav>
-                <button
-                  className="w-fit px-4 mt-8 py-2 bg-[#14AFF1] text-white font-semibold rounded-lg hover:bg-[#0F8AC0] transition-colors"
-                  onClick={() => {
-                    toggleModal();
-                    toggleNavbar();
-                  }}
-                >
-                  View Resume
-                </button>
               </div>
             </motion.div>
           )}
