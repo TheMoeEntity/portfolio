@@ -1,0 +1,18 @@
+export const services = [
+  "Frontend Development",
+  "Backend Development",
+  "Full-Stack Web Applications",
+  "Responsive Web Design",
+  "Progressive Web Apps (PWAs)",
+  "UI/UX Implementation",
+  "E-Commerce Solutions",
+  "API Development & Integration",
+  "Performance Optimization",
+  "Content Management Systems (CMS)",
+  "Testing & Debugging",
+  "Code Reviews & Refactoring",
+  "Custom Web Solutions",
+  "Web Animations & Interactions",
+  "Third-Party Integrations",
+  "Maintenance & Support",
+];

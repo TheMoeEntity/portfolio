@@ -8,25 +8,9 @@ import { useTheme } from "@/context/ThemeContext";
 import Loader from "@/components/shared/Loader";
 import { useState } from "react";
 import Goals from "./Goals";
+import { services } from "@/app/lib/constants";
+// import { useMousePosition } from "@/hooks/useMousePosition";
 const Hero = () => {
-  const services = [
-    "Frontend Development",
-    "Backend Development",
-    "Full-Stack Web Applications",
-    "Responsive Web Design",
-    "Progressive Web Apps (PWAs)",
-    "UI/UX Implementation",
-    "E-Commerce Solutions",
-    "API Development & Integration",
-    "Performance Optimization",
-    "Content Management Systems (CMS)",
-    "Testing & Debugging",
-    "Code Reviews & Refactoring",
-    "Custom Web Solutions",
-    "Web Animations & Interactions",
-    "Third-Party Integrations",
-    "Maintenance & Support",
-  ];
   // Variants for staggered text animation
   const containerVariants = {
     hidden: { opacity: 0, transform: "translateY(100px)" },
@@ -53,17 +37,39 @@ const Hero = () => {
     setIsLoading(false); // Update loading state when loader finishes
   };
   const { theme } = useTheme();
+  // const { x, y } = useMousePosition();
+  // const [, setIsHovered] = useState<boolean>(false);
+  // const size = 40;
   return (
     <>
-      <section className="container lg:mt-10 mx-auto lg:px-4 lg:py-4">
+      <section className="container overflow-visible lg:mt-10 mx-auto lg:px-4 lg:py-4">
         {isLoading && <Loader onLoadingComplete={handleLoadingComplete} />}
         {!isLoading && (
           <motion.div
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="flex flex-col w-full mb-2 text-left  "
+            className="flex flex-col w-full mb-2 text-left "
           >
+            {/* <motion.h1
+              transition={{
+                type: "tween",
+                ease: "backOut",
+              }}
+              animate={{
+                WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`,
+                WebkitMaskSize: size,
+              }}
+              className={`mask mb-2 hero-text text-6xl font-bold tracking-tighter text-[#110f10] lg:text-8xl md:text-7xl`}
+            >
+              <span
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                Transforming Ideas into Interactive Realities, One Commit at a
+                Time.
+              </span>
+            </motion.h1> */}
             <motion.h1
               variants={containerVariants}
               className={`mb-2 hero-text text-6xl font-bold tracking-tighter ${theme === "light" ? "text-[#110f10]" : "text-white"} lg:text-8xl md:text-7xl`}

@@ -23,7 +23,22 @@ body {
     text-wrap: balance;
   }
 }
-
+.mask {
+  position: fixed;
+  z-index: 9999999;
+  top: -70px;
+  overflow: visible;
+  /* mask-size: 40px; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px;
+  width: 100%;
+  mask-repeat: no-repeat;
+  mask-image: url("/ellipse.svg");
+  background: #14aff1;
+}
 @media screen and (max-width: 330px) {
   .hero-text {
     font-size: 50px;
