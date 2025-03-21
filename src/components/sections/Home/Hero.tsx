@@ -186,8 +186,14 @@ const Hero = () => {
           <article className="flex flex-1 flex-col gap-10">
             <p className="text-lg font-normal">
               Currently available for new projects <br />{" "}
-              <a className="font-bold" href="mailto:mosesnwigberi@gmail.com">
+              {/* <a className="font-bold" href="mailto:mosesnwigberi@gmail.com">
                 Send me an email ↗{" "}
+              </a> */}
+              <a
+                className="font-bold underline underline-offset-4 hover:text-[#14AFF1] transition"
+                href="mailto:mosesnwigberi@gmail.com?subject=Let's%20Connect&body=Hi%20Moses,"
+              >
+                Send me an email ↗
               </a>
             </p>
             {/* <div className="flex md:hidden lg:hidden flex-col gap-10 w-full">
