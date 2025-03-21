@@ -45,7 +45,7 @@ const ParallaxMockup = ({
           height: `${multiplier * 630}px`,
           y: yParallax, // Apply parallax effect
         }}
-        className="absolute -rotate-6 bottom-40 md:bottom-20 right-[0] z-[20]"
+        className="absolute -rotate-6 bottom-40 md:bottom-20 right-[0] z-10"
       >
         <Image
           src={simulator}

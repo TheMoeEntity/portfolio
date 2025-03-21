@@ -21,7 +21,7 @@ const Header = () => {
     const section = document.getElementById(sectionName);
     if (section) {
       window.scrollTo({
-        top: section.offsetTop - 10,
+        top: section.offsetTop - 100,
         behavior: "smooth",
       });
     }
@@ -48,7 +48,7 @@ const Header = () => {
   const { theme } = useTheme();
   return (
     <header
-      className={`fixed z-10 w-full bg-[#110f10] md:static font-[family-name:var(--font-geist-sans)] ${theme === "light" ? "text-[#110f10]" : "text-white"}  body-font`}
+      className={`fixed z-[11] w-full bg-[#110f10] md:static font-[family-name:var(--font-geist-sans)] ${theme === "light" ? "text-[#110f10]" : "text-white"}  body-font`}
     >
       <div className="container mx-auto items-center py-6 flex md:py-7 px-5 md:flex-row xl:px-8">
         <Link
@@ -135,7 +135,7 @@ const Header = () => {
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -20 }}
-                        transition={{ delay: index * 0.4, duration: 0.7 }}
+                        transition={{ delay: index * 0.25, duration: 0.55 }}
                       >
                         {section}
                       </motion.button>
