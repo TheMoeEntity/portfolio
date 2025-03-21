@@ -11,7 +11,7 @@ import Works from "@/components/sections/Home/Works";
 
 export default function Home() {
   return (
-    <main className="p-5 pb-20 font-[family-name:var(--font-geist-sans)]">
+    <main className="p-4 pb-20 font-[family-name:var(--font-geist-sans)]">
       <Hero />
       {/* <Goals /> */}
       <Works />

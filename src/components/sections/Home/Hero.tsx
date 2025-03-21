@@ -42,7 +42,7 @@ const Hero = () => {
   // const size = 40;
   return (
     <>
-      <section className="container overflow-visible lg:mt-10 mx-auto lg:px-4 lg:py-4">
+      <section className="mt-24 md:mt-0 container overflow-visible lg:mt-10 mx-auto lg:px-4 lg:py-4">
         {isLoading && <Loader onLoadingComplete={handleLoadingComplete} />}
         {!isLoading && (
           <motion.div
