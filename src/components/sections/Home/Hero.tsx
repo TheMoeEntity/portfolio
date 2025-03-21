@@ -72,7 +72,7 @@ const Hero = () => {
             </motion.h1> */}
             <motion.h1
               variants={containerVariants}
-              className={`mb-2 hero-text text-6xl font-bold tracking-tighter ${theme === "light" ? "text-[#110f10]" : "text-white"} lg:text-8xl md:text-7xl`}
+              className={`mb-2 md:pr-2 hero-text text-6xl font-bold tracking-tighter ${theme === "light" ? "text-[#110f10]" : "text-white"} lg:text-8xl md:text-7xl`}
             >
               {"Crafting Digital Experiences, One Arrow Function at a Time"
                 .split(" ")
