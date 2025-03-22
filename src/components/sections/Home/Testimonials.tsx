@@ -170,7 +170,7 @@ const Testimonials: React.FC = () => {
     <div
       id="testimonials"
       ref={containerRef}
-      className="relative xl:mt-20 min-h-screen md:min-h-[800px] xl:min-h-screen w-full container mx-auto"
+      className="relative xl:mt-20 min-h-screen md:min-h-[1100px] xl:min-h-screen w-full container mx-auto"
     >
       <div className="md:absolute py-10 mb-2 text-center text-4xl font-bold tracking-tighter text-white md:text-6xl top-1/2 left-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
         People Seem to Like Me (Mostly ☻)
