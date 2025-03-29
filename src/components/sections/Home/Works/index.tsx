@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import airtimeplus from "../../../../app/images/airtimeplus.png";
@@ -13,8 +13,17 @@ import tribu from "../../../../app/images/tribu-hotel.png";
 import pepnops from "../../../../app/images/pepnops-inc.png";
 import aman from "../../../../app/images/aman-awards.png";
 import farzad from "../../../../app/images/farzads-blog.png";
+import artelia from "../../../../app/images/amour-artlia-events-space.png";
 import simulator from "../../../../app/images/ATPB.png";
 import ParallaxMockup from "./Mockup";
+export type projectType = {
+  link: string;
+  type: string;
+  newProject?: boolean;
+  image: StaticImageData;
+  title: string;
+  description: string;
+};
 const airtimeplusBeta = {
   link: "https://beta.airtimeplus.ng",
   type: "real-world",
@@ -23,7 +32,7 @@ const airtimeplusBeta = {
   description:
     "Airtimeplus Beta is a Progressive Web Application that allows users to buy airtime, data, and pay bills online. No signs ups required.",
 };
-const projects = [
+const projects: projectType[] = [
   {
     type: "real-world",
     link: "https://greencalfoundation.com",
@@ -71,6 +80,15 @@ const projects = [
     title: "Dove Hospital",
     description:
       "Dove Hospital is a medical center that provides healthcare services to patients. The website has been up since 2018, but it's currently 'on a break' because someone forgot to renew the hosting. Don't worry, it's not a medical emergency—just a digital one!",
+  },
+  {
+    type: "side",
+    link: "#",
+    newProject: true,
+    image: artelia,
+    title: "Amour Artelia Events Space",
+    description:
+      "Amour Artelia provides a versatile event and studio space designed to accommodate intimate weddings, corporate events, and creative productions. The project is still in development and would be launching soon.",
   },
   {
     type: "side",
@@ -174,6 +192,13 @@ export default function Works() {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
+                {project.newProject && (
+                  <div className="absolute right-3 top-4 md:top-10 md:right-10">
+                    <span className="text-[#14AFF1] border-[2px] border-[#14AFF1] shadow-md px-3 py-1 rounded-md">
+                      NEW
+                    </span>
+                  </div>
+                )}
                 <Image
                   src={project.image}
                   alt={project.title}
