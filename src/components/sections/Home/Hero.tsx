@@ -51,25 +51,6 @@ const Hero = () => {
             variants={containerVariants}
             className="flex flex-col w-full mb-2 text-left "
           >
-            {/* <motion.h1
-              transition={{
-                type: "tween",
-                ease: "backOut",
-              }}
-              animate={{
-                WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`,
-                WebkitMaskSize: size,
-              }}
-              className={`mask mb-2 hero-text text-6xl font-bold tracking-tighter text-[#110f10] lg:text-8xl md:text-7xl`}
-            >
-              <span
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-              >
-                Transforming Ideas into Interactive Realities, One Commit at a
-                Time.
-              </span>
-            </motion.h1> */}
             <motion.h1
               variants={containerVariants}
               className={`mb-2 md:pr-2 hero-text text-6xl font-bold tracking-tighter ${theme === "light" ? "text-[#110f10]" : "text-white"} lg:text-8xl md:text-7xl`}

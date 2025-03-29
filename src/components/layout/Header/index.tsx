@@ -5,6 +5,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "@/context/ThemeContext";
 import { Menu } from "lucide-react";
+import FloatingHeader from "@/components/shared/UI/FloatingHeader";
 
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
@@ -50,6 +51,7 @@ const Header = () => {
     <header
       className={`fixed z-[11] w-full bg-[#110f10] md:static font-[family-name:var(--font-geist-sans)] ${theme === "light" ? "text-[#110f10]" : "text-white"}  body-font`}
     >
+      <FloatingHeader />
       <div className="container mx-auto items-center py-6 flex md:py-7 px-5 md:flex-row xl:px-8">
         <Link
           className="flex title-font font-medium mb-4 md:mb-0 pr-4"

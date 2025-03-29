@@ -12,6 +12,7 @@ body {
   color: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .fixedClass {
   width: fit-content;
   margin: 20px auto;
@@ -39,6 +40,31 @@ body {
   mask-image: url("/ellipse.svg");
   background: #14aff1;
 }
+/* .framer-w6mgug {
+  -webkit-backdrop-filter: blur(10px);
+  align-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background-color: #1c1c1c87;
+  border-radius: 24px;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 24px;
+  height: min-content;
+  justify-content: center;
+  left: 50%;
+  overflow: visible;
+  padding: 12px 12px 12px 24px;
+  position: fixed;
+  top: 16px;
+  bottom: 0px;
+  transform: translate(-50%);
+  width: min-content;
+  z-index: 1;
+} */
+
 @media screen and (max-width: 330px) {
   .hero-text {
     font-size: 50px;
@@ -47,5 +73,68 @@ body {
 @media screen and (max-width: 285px) {
   .hero-text {
     font-size: 45px;
+  }
+}
+
+.framer-w6mgug {
+  -webkit-backdrop-filter: blur(10px);
+  align-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background-color: #1c1c1c87;
+  border-radius: 24px;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 24px;
+  height: min-content;
+  justify-content: center;
+  left: 50%;
+  overflow: visible;
+  padding: 12px 12px 12px 24px;
+  position: fixed;
+  top: 16px;
+  transform: translate(-50%, 0);
+  width: min-content;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy transition */
+}
+
+/* Drop-in animation */
+.animate-drop-in {
+  animation: dropIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -100px);
+  }
+  80% {
+    transform: translate(-50%, 10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 767px) {
+  .framer-w6mgug {
+    top: auto;
+    bottom: 16px;
+    opacity: 1 !important;
+    transform: translate(-50%, 0) !important;
+    animation: none !important;
+  }
+}
+
+/* Initial state for md screens and up */
+@media screen and (min-width: 768px) {
+  .framer-w6mgug:not(.animate-drop-in) {
+    opacity: 0;
+    transform: translate(-50%, -100px);
   }
 }
