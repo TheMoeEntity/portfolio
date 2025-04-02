@@ -29,40 +29,6 @@ A modern, responsive portfolio website showcasing my skills, projects, and profe
 - **Project Showcase** (Case-study format)
 - **SEO Optimized** (Next.js SSG)
 
-## 🚀 Development
-
-1. Clone repository:
-   ```bash
-   git clone https://github.com/TheMoeEntity/portfolio.git
-   Install dependencies:
-   ```
-
-bash
-Copy
-npm install
-Run development server:
-
-bash
-Copy
-npm run dev
-Build for production:
-
-bash
-Copy
-npm run build
-📂 Project Structure
-Copy
-/src
-├── components/ # Reusable components
-├── constants/ # Data and configurations
-├── hooks/ # Custom React hooks
-├── lib/ # Utility functions
-├── pages/ # Application routes
-├── public/ # Static assets
-├── styles/ # Global styles
-├── types/ # TypeScript types
-└── utils/ # Helper functions
-
 📬 Contact Me
 Let's build something amazing together!
 
