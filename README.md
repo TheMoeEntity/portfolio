@@ -1,4 +1,4 @@
-# Portfolio Website - [Your Name]
+# Portfolio Website - [Moses Nwigberi]
 
 ![Portfolio Preview](https://mosesnwigberi.com/portfolio.png)
 
