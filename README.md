@@ -4,7 +4,7 @@ Welcome to my portfolio website! This is a showcase of my skills, projects, and 
 
 ## 🚀 Live Demo
 
-Check out the live version of my portfolio: [https://codewithmoe.vercel.app](https://codewithmoe.vercel.app)
+Check out the live version of my portfolio: [https://mosesnwigberi.com](https://www.mosesnwigberi.com)
 
 ## 🛠️ Technologies Used
 
