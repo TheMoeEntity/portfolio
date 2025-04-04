@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "@context": "https://schema.org",
       "@type": "Person",
       name: "Moses Chukwudi Nwigberi",
-      url: "https://codewithmoe.vercel.app",
+      url: "https://www.mosesnwigberi.com",
       jobTitle: "Fullstack Web Developer",
       worksFor: {
         "@type": "DITCOSoft Technologies",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "Welcome to the online portfolio of Moses Chukwudi Nwigberi, a passionate web developer with a chemical engineering background based in Lagos, Nigeria. Explore projects, skills, and professional experiences.",
   authors: {
     name: "Moses Chukwudi Nwigberi",
-    url: "https://codewithmoe.vercel.app",
+    url: "https://www.mosesnwigberi.com",
   },
   creator: "Moses Chukwudi Nwigberi",
   applicationName: "Moe's Portfolio",
@@ -51,10 +51,10 @@ export const metadata: Metadata = {
     siteName: "Moe's Portfolio",
     description:
       "Building sleek UIs with Next.js & TypeScript. Explore Moses Chukwudi's web development projects, showcasing skills and professional work.",
-    url: "https://codewithmoe.vercel.app",
+    url: "https://www.mosesnwigberi.com",
     images: [
       {
-        url: "https://codewithmoe.vercel.app/og-image.jpg",
+        url: "https://www.mosesnwigberi.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Moses Chukwudi Nwigberi Portfolio",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: "Moses Chukwudi's Portfolio | Web Developer & Engineer",
     description:
       "Explore Moses Chukwudi's web development projects, showcasing skills and professional work.",
-    images: ["https://codewithmoe.vercel.app/og-image.jpg"], // Replace with a relevant image URL for Twitter Card
+    images: ["https://www.mosesnwigberi.com/og-image.jpg"], // Replace with a relevant image URL for Twitter Card
   },
 };
 

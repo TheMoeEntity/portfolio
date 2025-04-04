@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const baseUrl = "https://codewithmoe.vercel.app";
+  const baseUrl = "https://www.mosesnwigberi.com";
 
   // Define static pages
   const pages = ["/", "/not-found"];
