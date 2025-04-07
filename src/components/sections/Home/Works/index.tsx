@@ -82,8 +82,8 @@ const projects: projectType[] = [
       "Dove Hospital is a medical center that provides healthcare services to patients. The website has been up since 2018, but it's currently 'on a break' because someone forgot to renew the hosting. Don't worry, it's not a medical emergency—just a digital one!",
   },
   {
-    type: "side",
-    link: "#",
+    type: "real-world",
+    link: "https://www.amourartelia.com",
     newProject: true,
     image: artelia,
     title: "Amour Artelia Events Space",
