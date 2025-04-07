@@ -35,6 +35,15 @@ const airtimeplusBeta = {
 const projects: projectType[] = [
   {
     type: "real-world",
+    link: "https://www.amourartelia.com",
+    newProject: true,
+    image: artelia,
+    title: "Amour Artelia Events Space",
+    description:
+      "Amour Artelia provides a versatile event and studio space designed to accommodate intimate weddings, corporate events, and creative productions. The project is still in development and would be launching soon.",
+  },
+  {
+    type: "real-world",
     link: "https://greencalfoundation.com",
     image: greencal,
     title: "GreenCal Foundation",
@@ -80,15 +89,6 @@ const projects: projectType[] = [
     title: "Dove Hospital",
     description:
       "Dove Hospital is a medical center that provides healthcare services to patients. The website has been up since 2018, but it's currently 'on a break' because someone forgot to renew the hosting. Don't worry, it's not a medical emergency—just a digital one!",
-  },
-  {
-    type: "real-world",
-    link: "https://www.amourartelia.com",
-    newProject: true,
-    image: artelia,
-    title: "Amour Artelia Events Space",
-    description:
-      "Amour Artelia provides a versatile event and studio space designed to accommodate intimate weddings, corporate events, and creative productions. The project is still in development and would be launching soon.",
   },
   {
     type: "side",
