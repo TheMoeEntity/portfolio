@@ -26,6 +26,7 @@ export const Footer = () => {
               <a
                 href="https://www.github.com/theMoeEntity"
                 target="_blank"
+                title="Have a look at my GitHub profile and repositories"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#14AFF1] transition-colors"
               >
@@ -34,6 +35,7 @@ export const Footer = () => {
               <a
                 href="https://www.linkedin.com/in/nwigberi-moses"
                 target="_blank"
+                title="Connect with me on LinkedIn"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#14AFF1] transition-colors"
               >
@@ -42,6 +44,7 @@ export const Footer = () => {
               <a
                 href="https://www.instagram.com/nc_moses"
                 target="_blank"
+                title="Visit my Instagram page"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#14AFF1] transition-colors"
               >
@@ -50,6 +53,7 @@ export const Footer = () => {
               <a
                 href="https://www.x.com/NMoses_"
                 target="_blank"
+                title="Connect with me on X"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#14AFF1] transition-colors"
               >
