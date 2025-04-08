@@ -1,6 +1,7 @@
 export const services = [
   "Frontend Development",
   "Backend Development",
+  "Search Engine Optimizations (SEO)",
   "Full-Stack Web Applications",
   "Responsive Web Design",
   "Progressive Web Apps (PWAs)",
