@@ -56,7 +56,7 @@ export const Typewriter = ({
   }, [currentIndex, delay, text]);
 
   return (
-    <span ref={typewriterRef} className="">
+    <span ref={typewriterRef} className="text-gray-400">
       {currentText}
     </span>
   );

@@ -70,7 +70,7 @@ const Hero = () => {
             <br></br>
 
             <motion.p
-              className="font-normal leading-relaxed text-gray-500 dark:text-gray-400 lg:w-2/3"
+              className="font-normal leading-relaxed text-gray-400 lg:w-2/3"
               variants={containerVariants}
               initial="hidden"
               animate="visible"

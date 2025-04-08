@@ -211,7 +211,7 @@ const Header = () => {
             </button> */}
           </nav>
           <button
-            className="w-fit px-4 py-2 bg-[#14AFF1] text-white font-semibold rounded-lg hover:bg-[#0F8AC0] transition-colors"
+            className="w-fit px-4 py-2 bg-[#14AFF1] text-gray-800 font-semibold rounded-lg hover:bg-[#0F8AC0] transition-colors"
             onClick={() => {
               toggleModal();
             }}
