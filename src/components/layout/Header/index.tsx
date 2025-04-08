@@ -82,6 +82,7 @@ const Header = () => {
         <button
           className={`text-white ${navbarOpen && "fixed right-8 top-12"} cursor-pointer z-[51] text-3xl leading-none border border-solid border-transparent  rounded bg-transparent block md:hidden outline-none focus:outline-none ml-auto pb-3`}
           type="button"
+          title="Toggle Navigation Menu"
           onClick={toggleNavbar}
         >
           {navbarOpen ? (

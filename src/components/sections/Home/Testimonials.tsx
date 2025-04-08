@@ -117,11 +117,11 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         ></div>
         <div className="flex flex-col gap-1">
           <h1 className="text-lg font-bold text-white">{testimonial.name}</h1>
-          <p className="text-sm">{testimonial.role}</p>
+          <p className="text-sm text-gray-400">{testimonial.role}</p>
         </div>
       </div>
       <p
-        className="mt-2 text-sm"
+        className="mt-2 text-sm text-gray-400"
         dangerouslySetInnerHTML={{ __html: testimonial.text }}
       />
     </motion.div>
