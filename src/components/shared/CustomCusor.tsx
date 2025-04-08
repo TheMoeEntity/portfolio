@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { fairyDustCursor, trailingCursor } from "cursor-effects"; // Use camelCase
 
 const CustomCursor = () => {
-  const [effect, setEffect] = useState<"fairyDust" | "trailing">("fairyDust");
+  const [effect, setEffect] = useState<"fairyDust" | "trailing">("trailing");
 
   useEffect(() => {
     let cursor: fairyDustCursor | trailingCursor;
