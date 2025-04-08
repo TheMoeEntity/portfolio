@@ -1,10 +1,12 @@
 "use client";
-import { Linkedin, Instagram, Twitter, Github } from "lucide-react"; // Assuming you're using Lucide icons
-// import Link from "next/link";
+import { Linkedin, Instagram, Twitter, Github } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="text-gray-300 w-full border-[#ffffff1a] border-t-[0.5px] pt-12 pb-5">
+    <footer
+      className="text-gray-300 w-full border-[#ffffff1a] border-t-[0.5px] pt-12 pb-5"
+      style={{ backgroundColor: "#110f10" }}
+    >
       <div className="container w-full max-w-6xl mx-auto px-4">
         {/* Footer Content */}
         <div className="flex flex-wrap gap-y-10 w-full justify-between">
@@ -13,9 +15,8 @@ export const Footer = () => {
             <h2 className="text-2xl font-bold text-white">
               MOE&#39;S SUPER-AWESOME PORTFOLIO
             </h2>
-            <p className="text-gray-500">
-              {" "}
-              &copy; {new Date().getFullYear()} MOSES CHUKWUDI NWIGBERI.
+            <p className="text-gray-400">
+              © {new Date().getFullYear()} MOSES CHUKWUDI NWIGBERI.
             </p>
           </div>
 
@@ -67,7 +68,7 @@ export const Footer = () => {
         <div className="border-t invisible border-gray-800 my-8"></div>
 
         {/* Copyright */}
-        <div className="text-center uppercase text-gray-500">
+        <div className="text-center uppercase text-gray-400">
           <p>
             {`"`}all of the rights, all of the riiiiights{`"`} reserved
           </p>
