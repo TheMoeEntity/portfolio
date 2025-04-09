@@ -21,7 +21,7 @@ export const Footer = () => {
                 MOE&#39;S SUPER-AWESOME PORTFOLIO
               </h2>
               <a
-                href="mosesnwigberi@gmail.com"
+                href="mailto:mosesnwigberi@gmail.com"
                 className="text-2xl block my-5 font-bold text-white"
               >
                 mosesnwigberi@gmail.com ↗
