@@ -33,7 +33,7 @@ const ParallaxMockup = ({
   return (
     <motion.div
       ref={ref}
-      className="w-full mb-10 flex flex-col gap-10 relative"
+      className="w-full airtimeplus mb-10 flex flex-col gap-10 relative"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0 * 0.1 }}
@@ -52,7 +52,7 @@ const ParallaxMockup = ({
           alt={airtimeplusBeta.title}
           fill
           quality={100}
-          className="object-contain w-full h-auto"
+          className="object-contain  w-full h-auto"
         />
       </motion.div>
 

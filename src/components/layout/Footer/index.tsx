@@ -9,7 +9,7 @@ export const Footer = () => {
       style={{ clipPath: `polygon(0 0, 100% 0%, 100% 100%, 0 100%)` }}
     >
       <footer
-        className="text-gray-300 h-[600px] fixed bottom-0 md:h-[350px] w-full border-[#ffffff1a] border-t-[0.5px] pt-12 pb-5"
+        className="text-gray-300 h-[600px] fixed bottom-0 md:h-[350px] w-full pt-12 pb-5"
         style={{ backgroundColor: "#0E0D0E" }}
       >
         <div className="container w-full max-w-6xl mx-auto px-4">
@@ -21,10 +21,10 @@ export const Footer = () => {
                 MOE&#39;S SUPER-AWESOME PORTFOLIO
               </h2>
               <a
-                href="mailto:hello@mosesnwigberi.com"
+                href="mosesnwigberi@gmail.com"
                 className="text-2xl block my-5 font-bold text-white"
               >
-                hello@mosesnwigberi.com ↗
+                mosesnwigberi@gmail.com ↗
               </a>
               <p className="text-gray-400 mt-5 block">
                 © {new Date().getFullYear()} MOSES CHUKWUDI NWIGBERI.

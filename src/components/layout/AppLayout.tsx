@@ -5,9 +5,10 @@ import Footer from "./Footer";
 import dynamic from "next/dynamic";
 import { useTheme } from "@/context/ThemeContext";
 // import { ThemeSwitcher } from "../shared/ThemeSwitcher";
-const Cursor = dynamic(() => import("../shared/CustomCusor"), {
+const Cursor = dynamic(() => import("../shared/AnimatedCursor"), {
   ssr: false,
 });
+
 // import Loader from "../shared/Loader";
 
 type Props = {

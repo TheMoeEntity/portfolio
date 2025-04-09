@@ -23,6 +23,7 @@ export type projectType = {
   image: StaticImageData;
   title: string;
   description: string;
+  className?: string;
 };
 const airtimeplusBeta = {
   link: "https://beta.airtimeplus.ng",
@@ -37,6 +38,7 @@ const projects: projectType[] = [
     type: "real-world",
     link: "https://www.amourartelia.com",
     newProject: true,
+    className: "artelia",
     image: artelia,
     title: "Amour Artelia Events Space",
     description:
@@ -188,7 +190,7 @@ export default function Works() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <motion.div
-                className="relative p-3 bg-[#1B191A] md:p-5 w-full h-auto overflow-hidden rounded-lg"
+                className={`relative ${project.className} p-3 bg-[#1B191A] md:p-5 w-full h-auto overflow-hidden rounded-lg`}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >

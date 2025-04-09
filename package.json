@@ -16,6 +16,7 @@
     "next": "14.2.24",
     "npm": "^10.9.2",
     "react": "^18",
+    "react-animated-cursor": "^2.11.2",
     "react-dom": "^18"
   },
   "devDependencies": {
