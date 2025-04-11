@@ -1,5 +1,4 @@
 "use client";
-import { Typewriter } from "@/components/shared/TypeWriter";
 import { motion } from "framer-motion";
 import { Brands } from "../Brands";
 import years from "../../../app/images/years.png";
@@ -40,6 +39,7 @@ const Hero = () => {
   // const { x, y } = useMousePosition();
   // const [, setIsHovered] = useState<boolean>(false);
   // const size = 40;
+  const words = `I'm a full-stack developer based in Lagos, Nigeria, working with clients and teams from all over the world. I specialize in building beautiful, responsive, and high-performance web applications that deliver seamless user experiences. With a strong focus on frontend technologies and a solid foundation in backend development, I bring ideas to life by combining clean code, modern tools, and creative problem-solving.`;
   return (
     <>
       <section className="mt-24 md:mt-0 container overflow-visible lg:mt-10 mx-auto lg:px-4 lg:py-4">
@@ -70,6 +70,23 @@ const Hero = () => {
             <br></br>
 
             <motion.p
+              className="font-normal leading-relaxed text-gray-400 lg:w-2/3"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+            >
+              {words.split(" ").map((word, index) => (
+                <motion.span
+                  key={index}
+                  className="inline-block mr-2"
+                  variants={childVariants}
+                >
+                  {word}
+                </motion.span>
+              ))}
+            </motion.p>
+
+            {/* <motion.p
               className="font-normal leading-relaxed text-gray-400 lg:w-2/3"
               variants={containerVariants}
               initial="hidden"
@@ -160,7 +177,7 @@ const Hero = () => {
                   {word}
                 </motion.span>
               ))}
-            </motion.p>
+            </motion.p> */}
           </motion.div>
         )}
         <div className="w-full mt-10 flex flex-col md:flex-row md:justify-between">
@@ -172,7 +189,7 @@ const Hero = () => {
               </a> */}
               <a
                 className="font-bold underline underline-offset-4 hover:text-[#14AFF1] transition"
-                href="mailto:mosesnwigberi@gmail.com?subject=Let's%20Connect&body=Hi%20Moses,"
+                href="mailto:contact@mosesnwigberi.com?subject=Let's%20Connect&body=Hi%20Moses,"
               >
                 Send me an email ↗
               </a>
