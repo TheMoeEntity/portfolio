@@ -24,8 +24,8 @@ export const metadata: Metadata = {
       url: "https://www.mosesnwigberi.com",
       jobTitle: "Fullstack Web Developer",
       worksFor: {
-        "@type": "DITCOSoft Technologies",
-        name: "Freelance",
+        "@type": "Organization",
+        name: "VisCorner",
       },
       sameAs: [
         "https://www.linkedin.com/in/nwigberi-moses",
