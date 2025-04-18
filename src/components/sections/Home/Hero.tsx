@@ -8,6 +8,7 @@ import Loader from "@/components/shared/Loader";
 import { useState } from "react";
 import Goals from "./Goals";
 import { services } from "@/app/lib/constants";
+// import ConstellationCanvas from "@/components/shared/UI/Constellation";
 // import { useMousePosition } from "@/hooks/useMousePosition";
 const Hero = () => {
   // Variants for staggered text animation
@@ -42,7 +43,8 @@ const Hero = () => {
   const words = `I'm a full-stack developer based in Lagos, Nigeria, working with clients and teams from all over the world. I specialize in building beautiful, responsive, and high-performance web applications that deliver seamless user experiences. With a strong focus on frontend technologies and a solid foundation in backend development, I bring ideas to life by combining clean code, modern tools, and creative problem-solving.`;
   return (
     <>
-      <section className="mt-24 md:mt-0 container overflow-visible lg:mt-10 mx-auto lg:px-4 lg:py-4">
+      <section className="mt-24 md:mt-0 relative container overflow-visible lg:mt-10 mx-auto lg:px-4 lg:py-4">
+        {/* <ConstellationCanvas /> */}
         {isLoading && <Loader onLoadingComplete={handleLoadingComplete} />}
         {!isLoading && (
           <motion.div

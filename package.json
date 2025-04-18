@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tsparticles/basic": "^3.8.1",
+    "@tsparticles/engine": "^3.8.1",
     "cursor-effects": "^1.0.17",
     "framer-motion": "^12.4.7",
     "install": "^0.13.0",
@@ -17,7 +19,9 @@
     "npm": "^10.9.2",
     "react": "^18",
     "react-animated-cursor": "^2.11.2",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-tsparticles": "^2.12.2",
+    "tsparticles": "^3.8.1"
   },
   "devDependencies": {
     "@types/node": "^20",
