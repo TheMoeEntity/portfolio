@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@NMoses_",
-    title: "Moses Chukwudi's Portfolio | Web Developer & Engineer",
+    title: "Moses Chukwudi's Portfolio | Web Developer & Engineer ",
     description:
       "Explore Moses Chukwudi's web development projects, showcasing skills and professional work.",
     images: ["https://www.mosesnwigberi.com/moe-og-image.jpg"], // Replace with a relevant image URL for Twitter Card
