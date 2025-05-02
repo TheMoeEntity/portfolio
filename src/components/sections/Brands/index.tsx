@@ -7,8 +7,10 @@ import dove from "../../../app/images/dovehospital.jpg";
 import greencal from "../../../app/images/greencal_logo.png";
 import zstinger from "../../../app/images/Zlogo1.png";
 import ditco from "../../../app/images/brands-Ditcosoft.png";
+import visCorner from "../../../../public/visorner logo.jpeg";
 
 const brands = [
+  { name: "VisCorner", logo: visCorner },
   { name: "DITCOSoft Technologies", logo: ditco },
   { name: "Dove Hospital", logo: dove },
   { name: "Nosrati", logo: nosrati },
@@ -18,7 +20,7 @@ const brands = [
 
 export const Brands = () => {
   return (
-    <div className="grid grid-cols-2 place-items-center w-full justify-center sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+    <div className="grid grid-cols-2 place-items-center w-full justify-center sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
       {brands.map((brand, index) => (
         <motion.div
           key={index}
@@ -33,7 +35,7 @@ export const Brands = () => {
           viewport={{ once: true }} // Animate only once
           transition={{ delay: index * 0.1, duration: 0.5 }} // Staggered animation
         >
-          {index === 1 ? ( // Special handling for Dove Hospital logo
+          {index === 2 || index === 0 ? ( // Special handling for Dove Hospital logo
             <div className="relative h-[80px] w-[80px]">
               <Image
                 src={brand.logo}

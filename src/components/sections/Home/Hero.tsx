@@ -256,7 +256,7 @@ const Hero = () => {
           <b>OF WRITING CODE</b>
         </motion.div>
 
-        <div>
+        <div className="mt-16 md:mt-0">
           <Brands />
         </div>
       </div>
