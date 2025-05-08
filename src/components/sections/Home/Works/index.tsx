@@ -15,6 +15,7 @@ import aman from "../../../../app/images/aman-awards.png";
 import farzad from "../../../../app/images/farzads-blog.png";
 import artelia from "../../../../app/images/amour-artlia-events-space.png";
 import simulator from "../../../../app/images/ATPB.png";
+import fame from "../../../../../public/Fame.png";
 import ParallaxMockup from "./Mockup";
 export type projectType = {
   link: string;
@@ -91,6 +92,14 @@ const projects: projectType[] = [
     title: "Dove Hospital",
     description:
       "Dove Hospital is a medical center that provides healthcare services to patients. The website has been up since 2018, but it's currently 'on a break' because someone forgot to renew the hosting. Don't worry, it's not a medical emergency—just a digital one!",
+  },
+  {
+    type: "side",
+    link: "#",
+    image: fame,
+    title: "Henry Fame Portfolio",
+    description:
+      "Explore the portfolio of Olamide Henry Famojuro — Henry Fame — a passionate character artist skilled in modeling, sculpting, and texturing for games, films, and 3D prints.",
   },
   {
     type: "side",
