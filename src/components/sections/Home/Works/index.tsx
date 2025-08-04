@@ -16,6 +16,7 @@ import farzad from "../../../../app/images/farzads-blog.png";
 import artelia from "../../../../app/images/amour-artlia-events-space.png";
 import simulator from "../../../../app/images/ATPB.png";
 import fame from "../../../../../public/Fame.png";
+import studio55 from "../../../../app/images/studio55-mvp.png";
 import ParallaxMockup from "./Mockup";
 export type projectType = {
   link: string;
@@ -37,8 +38,17 @@ const airtimeplusBeta = {
 const projects: projectType[] = [
   {
     type: "real-world",
-    link: "https://www.amourartelia.com",
+    link: "https://www.studio55.vercel.app",
     newProject: true,
+    image: studio55,
+    title: "Studio 55 (MVP)",
+    description:
+      "At Studio55byMich, we capture the profound emotions of weddings and the essence of individual portraits, turning fleeting moments into timeless keepsakes. This is the MVP of the revamped website, and it is still under review, the old SquareSpace version is still live at <a class='underline' href='https://studio55byMich.com'>studio55byMich.com</a>.",
+  },
+  {
+    type: "real-world",
+    link: "https://www.amourartelia.com",
+    newProject: false,
     className: "artelia",
     image: artelia,
     title: "Amour Artelia Events Space",
@@ -204,7 +214,7 @@ export default function Works() {
                 transition={{ duration: 0.3 }}
               >
                 {project.newProject && (
-                  <div className="absolute right-3 top-4 md:top-10 md:right-10">
+                  <div className="absolute left-3 top-4 md:top-10 md:left-10">
                     <span className="text-[#14AFF1] border-[2px] border-[#14AFF1] shadow-md px-3 py-1 rounded-md">
                       NEW
                     </span>
@@ -225,7 +235,10 @@ export default function Works() {
                 >
                   {project.title}
                 </a>
-                <p className="text-[#F0EDF0] text-sm">{project.description}</p>
+                <p
+                  className="text-[#F0EDF0] text-sm"
+                  dangerouslySetInnerHTML={{ __html: project.description }}
+                />
               </div>
             </motion.div>
           ))}
