@@ -59,6 +59,26 @@ const testimonials: Testimonial[] = [
     },
     text: `I hired him to build my <b class="text-[#C4C4C4]">startup website</b>, and I ended up with a <b class="text-[#C4C4C4]">masterpiece</b>.`,
   },
+  {
+    name: "Blaise Mbachu",
+    role: "Graphic Artist",
+    profile: "blaise.avif",
+    position: {
+      x: "xl:left-[60%] md:left-[50%]",
+      y: "md:top-[100px] xl:top-[200px]",
+    },
+    text: `Moses is one of the most reliable developers I’ve had the chance to work with. We’ve collaborated on several projects—Amour Artelia, Studio55, Greencal Foundation, and now the VisCorner UI redesign—and our workflow has always been smooth. He’s sharp, communicative, and knows how to bring designs to life with precision. <b class="text-[#C4C4C4]">Highly recommend!</b>`,
+  },
+  {
+    name: "Olamide Famojuro",
+    role: "Character animator at Omen Studios",
+    profile: "FAME-LOGO.png",
+    position: {
+      x: "xl:right-[10%] md:right-[10%]",
+      y: "md:top-[350px] xl:top-[350px]",
+    },
+    text: `Nwigberi Moses delivered quality work with a clear understanding of the project vision. He offered valuable input, communicated professionally, and met expectations with ease. A reliable developer to work with.`,
+  },
 ];
 
 // TestimonialCard Component
