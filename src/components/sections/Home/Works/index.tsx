@@ -14,6 +14,7 @@ import pepnops from "../../../../app/images/pepnops-inc.png";
 import aman from "../../../../app/images/aman-awards.png";
 import farzad from "../../../../app/images/farzads-blog.png";
 import artelia from "../../../../app/images/amour-artlia-events-space.png";
+import technova from "../../../../app/images/technovasummit.png";
 import simulator from "../../../../app/images/ATPB.png";
 import fame from "../../../../../public/Fame.png";
 import studio55 from "../../../../app/images/studio55-mvp.png";
@@ -36,6 +37,15 @@ const airtimeplusBeta = {
     "Airtimeplus Beta is a Progressive Web Application that allows users to buy airtime, data, and pay bills online. No signs ups required.",
 };
 const projects: projectType[] = [
+  {
+    type: "real-world",
+    link: "https://www.technovasummit.com",
+    newProject: true,
+    image: technova,
+    title: "TechNova Summit",
+    description:
+      "TechNova is a dynamic platform for tech enthusiasts to connect, learn, and innovate. We empower individuals to unlock their potential, spark creativity, and shape the future of technology in Africa.",
+  },
   {
     type: "real-world",
     link: "https://www.studio55.vercel.app",
