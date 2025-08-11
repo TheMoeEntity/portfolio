@@ -64,8 +64,8 @@ const testimonials: Testimonial[] = [
     role: "Graphic Artist",
     profile: "blaise.avif",
     position: {
-      x: "xl:left-[60%] md:left-[50%]",
-      y: "md:top-[100px] xl:top-[200px]",
+      x: "left-[50px]",
+      y: "md:bottom-10 xl:bottom-[60px] md:bottom-[210px] -z-1",
     },
     text: `Moses is one of the most reliable developers I’ve had the chance to work with. We’ve collaborated on several projects—Amour Artelia, Studio55, Greencal Foundation, and now the VisCorner UI redesign—and our workflow has always been smooth. He’s sharp, communicative, and knows how to bring designs to life with precision. <b class="text-[#C4C4C4]">Highly recommend!</b>`,
   },
@@ -74,8 +74,8 @@ const testimonials: Testimonial[] = [
     role: "Character animator at Omen Studios",
     profile: "FAME-LOGO.png",
     position: {
-      x: "xl:right-[10%] md:right-[10%]",
-      y: "md:top-[350px] xl:top-[350px]",
+      x: "xl:right-[15%] md:right-[20%]",
+      y: "md:top-[450px] xl:top-[400px]",
     },
     text: `Nwigberi Moses delivered quality work with a clear understanding of the project vision. He offered valuable input, communicated professionally, and met expectations with ease. A reliable developer to work with.`,
   },
