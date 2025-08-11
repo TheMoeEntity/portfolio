@@ -59,26 +59,26 @@ const testimonials: Testimonial[] = [
     },
     text: `I hired him to build my <b class="text-[#C4C4C4]">startup website</b>, and I ended up with a <b class="text-[#C4C4C4]">masterpiece</b>.`,
   },
-  // {
-  //   name: "Blaise Mbachu",
-  //   role: "Graphic Artist",
-  //   profile: "blaise.avif",
-  //   position: {
-  //     x: "left-[50px]",
-  //     y: "md:bottom-10 xl:bottom-[60px] md:bottom-[210px] -z-1",
-  //   },
-  //   text: `Moses is one of the most reliable developers I’ve had the chance to work with. We’ve collaborated on several projects—Amour Artelia, Studio55, Greencal Foundation, and now the VisCorner UI redesign—and our workflow has always been smooth. He’s sharp, communicative, and knows how to bring designs to life with precision. <b class="text-[#C4C4C4]">Highly recommend!</b>`,
-  // },
-  // {
-  //   name: "Olamide Famojuro",
-  //   role: "Character animator at Omen Studios",
-  //   profile: "FAME-LOGO.png",
-  //   position: {
-  //     x: "xl:right-[15%] md:right-[20%]",
-  //     y: "md:top-[450px] xl:top-[400px]",
-  //   },
-  //   text: `Nwigberi Moses delivered quality work with a clear understanding of the project vision. He offered valuable input, communicated professionally, and met expectations with ease. A reliable developer to work with.`,
-  // },
+  {
+    name: "Blaise Mbachu",
+    role: "Graphic Artist",
+    profile: "blaise.avif",
+    position: {
+      x: "left-[80px]",
+      y: "md:bottom-10 xl:bottom-[60px] md:bottom-[210px]",
+    },
+    text: `Moses is one of the most reliable developers I’ve had the chance to work with. We’ve collaborated on several projects—Amour Artelia, Studio55, Greencal Foundation, and now the VisCorner UI redesign—and our workflow has always been smooth. He’s sharp, communicative, and knows how to bring designs to life with precision. <b class="text-[#C4C4C4]">Highly recommend!</b>`,
+  },
+  {
+    name: "Olamide Famojuro",
+    role: "Character animator at Omen Studios",
+    profile: "FAME-LOGO.png",
+    position: {
+      x: "xl:right-[8%] md:right-[10%]",
+      y: "md:top-[150px] xl:top-[100px]",
+    },
+    text: `Nwigberi Moses delivered quality work with a clear understanding of the project vision. He offered valuable input, communicated professionally, and met expectations with ease. A reliable developer to work with.`,
+  },
 ];
 
 // TestimonialCard Component
