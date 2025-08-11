@@ -21,7 +21,7 @@ import studio55 from "../../../../app/images/studio55-mvp.png";
 import ParallaxMockup from "./Mockup";
 export type projectType = {
   link: string;
-  type: string;
+  type: "real-world" | "side";
   newProject?: boolean;
   image: StaticImageData;
   title: string;
@@ -38,7 +38,7 @@ const airtimeplusBeta = {
 };
 const projects: projectType[] = [
   {
-    type: "real-world",
+    type: "side",
     link: "https://www.technovasummit.com",
     newProject: true,
     image: technova,
