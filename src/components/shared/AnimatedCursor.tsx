@@ -5,30 +5,30 @@ const Animated_Cursor = () => {
   return (
     <>
       <AnimatedCursor
-        innerSize={8} // Small inner dot
-        outerSize={35} // Larger outer ring
-        color="20, 175, 241" // #14AFF1 in RGB
-        outerAlpha={0.3} // Slightly transparent ring
-        innerScale={0.7} // Subtle scale on hover
-        outerScale={5} // Dramatic ring expansion on hover
+        innerSize={8}
+        outerSize={35}
+        color="0, 119, 255" // #0077ff in RGB
+        outerAlpha={0.3}
+        innerScale={0.7}
+        outerScale={5}
         clickables={[
-          "a", // Changes cursor on <a> tags
-          "button", // Changes cursor on <button> tags
-          ".custom-link", // Changes cursor on elements with this class
+          "a",
+          "button",
+          ".custom-link",
           {
-            target: ".airtimeplus", // Special elements
-            innerSize: 12, // No 'options' nesting
+            target: ".airtimeplus",
+            innerSize: 12,
             outerSize: 12,
-            color: "193, 11, 111", // Same #14AFF1
+            color: "#0077ff",
             outerAlpha: 0.4,
             innerScale: 0.7,
             outerScale: 6,
           },
           {
-            target: ".artelia", // Special elements
-            innerSize: 12, // No 'options' nesting
+            target: ".artelia",
+            innerSize: 12,
             outerSize: 12,
-            color: "#C8B9A6", // Same #14AFF1
+            color: "#C8B9A6",
             outerAlpha: 0.4,
             innerScale: 0.7,
             outerScale: 6,

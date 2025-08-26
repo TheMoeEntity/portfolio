@@ -13,9 +13,10 @@ import tribu from "../../../../app/images/tribu-hotel.png";
 import pepnops from "../../../../app/images/pepnops-inc.png";
 import aman from "../../../../app/images/aman-awards.png";
 import farzad from "../../../../app/images/farzads-blog.png";
+import viscorner from "../../../../app/images/viscorner-main.png";
 import artelia from "../../../../app/images/amour-artlia-events-space.png";
 import technova from "../../../../app/images/technovasummit.png";
-import simulator from "../../../../app/images/ATPB.png";
+import simulator from "../../../../app/images/viscorner-phone-mockup.png";
 import fame from "../../../../../public/Fame.png";
 import studio55 from "../../../../app/images/studio55-mvp.png";
 import ParallaxMockup from "./Mockup";
@@ -28,13 +29,13 @@ export type projectType = {
   description: string;
   className?: string;
 };
-const airtimeplusBeta = {
-  link: "https://beta.airtimeplus.ng",
+const visCornerApp = {
+  link: "https://viscorner.com",
   type: "real-world",
-  image: airtimeplus,
-  title: "Airtimeplus Beta",
+  image: viscorner,
+  title: "VisCorner App",
   description:
-    "Airtimeplus Beta is a Progressive Web Application that allows users to buy airtime, data, and pay bills online. No signs ups required.",
+    "VisCorner is an online platform that connects customers with verified service providers in dozens of categories—from plumbing and photography to event planning and AC installation.",
 };
 const projects: projectType[] = [
   {
@@ -54,6 +55,14 @@ const projects: projectType[] = [
     title: "Studio 55 (MVP)",
     description:
       "At Studio55byMich, we capture the profound emotions of weddings and the essence of individual portraits, turning fleeting moments into timeless keepsakes. This is the MVP of the revamped website, and it is still under review, the old SquareSpace version is still live at <a class='underline' href='https://studio55byMich.com'>studio55byMich.com</a>.",
+  },
+  {
+    link: "https://beta.airtimeplus.ng",
+    type: "real-world",
+    image: airtimeplus,
+    title: "Airtimeplus Beta",
+    description:
+      "Airtimeplus Beta is a Progressive Web Application that allows users to buy airtime, data, and pay bills online. No signs ups required.",
   },
   {
     type: "real-world",
@@ -206,7 +215,7 @@ export default function Works() {
         {filter === "real-world" && (
           <ParallaxMockup
             simulator={simulator}
-            airtimeplusBeta={airtimeplusBeta}
+            airtimeplusBeta={visCornerApp}
           />
         )}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10">
