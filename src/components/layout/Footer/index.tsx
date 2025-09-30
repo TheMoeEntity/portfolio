@@ -1,7 +1,7 @@
 "use client";
 // import { motion } from "framer-motion";
 import { Linkedin, Instagram, Twitter, Github } from "lucide-react";
-
+import { FaWhatsapp } from "react-icons/fa";
 export const Footer = () => {
   return (
     <div
@@ -24,7 +24,7 @@ export const Footer = () => {
                 href="mailto:contact@mosesnwigberi.com"
                 className="text-2xl block my-5 font-bold text-white"
               >
-                contact@mosesnwigberi.com ↗
+                mosesnwigberi@gmail.com ↗
               </a>
               <p className="text-gray-400 mt-5 block">
                 © {new Date().getFullYear()} MOSES CHUKWUDI NWIGBERI.
@@ -37,6 +37,15 @@ export const Footer = () => {
                 say hi ☻
               </h3>
               <div className="flex space-x-6">
+                <a
+                  href="https://wa.me/2348068376235?text=Hello%20Moses,%20I%20just%20visited%20your%20website"
+                  target="_blank"
+                  title="Reach out to me on whatsapp"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-[#14AFF1] transition-colors"
+                >
+                  <FaWhatsapp size={24} />
+                </a>
                 <a
                   href="https://www.github.com/theMoeEntity"
                   target="_blank"
