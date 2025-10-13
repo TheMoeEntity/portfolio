@@ -50,11 +50,19 @@ const projects: projectType[] = [
   {
     type: "real-world",
     link: "https://www.studio55.vercel.app",
-    newProject: true,
     image: studio55,
     title: "Studio 55 (MVP)",
     description:
       "At Studio55byMich, we capture the profound emotions of weddings and the essence of individual portraits, turning fleeting moments into timeless keepsakes. This is the MVP of the revamped website, and it is still under review, the old SquareSpace version is still live at <a class='underline' href='https://studio55byMich.com'>studio55byMich.com</a>.",
+  },
+  {
+    type: "real-world",
+    link: "https://www.wealthbridge-nine.vercel.app",
+    image: studio55,
+    title: "WealthBridge Financial Group",
+    description: `
+    WealthBridge Financial Services Holdings Limited is a full-service financial group providing integrated solutions across the financial spectrum. We serve corporations, institutions, and high-net-worth individuals with tailored strategies that address funding, investment, advisory, and financial intelligence needs. Our approach combines deep market knowledge with operational expertise to help clients create, manage, and preserve value across asset classes and sectors.
+    `,
   },
   {
     link: "https://beta.airtimeplus.ng",
