@@ -19,6 +19,7 @@ import technova from "../../../../app/images/technovasummit.png";
 import simulator from "../../../../app/images/viscorner-phone-mockup.png";
 import fame from "../../../../../public/Fame.png";
 import studio55 from "../../../../app/images/studio55-mvp.png";
+import wealthBridge from "../../../../app/images/wealthbridge.png";
 import ParallaxMockup from "./Mockup";
 export type projectType = {
   link: string;
@@ -58,7 +59,8 @@ const projects: projectType[] = [
   {
     type: "side",
     link: "https://www.wealthbridge-nine.vercel.app",
-    image: studio55,
+    image: wealthBridge,
+    newProject: true,
     title: "WealthBridge Financial Group",
     description: `
     WealthBridge Financial Services Holdings Limited is a full-service financial group providing integrated solutions across the financial spectrum. We serve corporations, institutions, and high-net-worth individuals with tailored strategies that address funding, investment, advisory, and financial intelligence needs. Our approach combines deep market knowledge with operational expertise to help clients create, manage, and preserve value across asset classes and sectors.
