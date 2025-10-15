@@ -17,7 +17,7 @@ import viscorner from "../../../../app/images/viscorner-main.png";
 import artelia from "../../../../app/images/amour-artlia-events-space.png";
 import technova from "../../../../app/images/technovasummit.png";
 import simulator from "../../../../app/images/viscorner-phone-mockup.png";
-import fame from "../../../../../public/Fame.png";
+import fame from "../../../../app/images/HenryFame.png";
 import studio55 from "../../../../app/images/studio55-mvp.png";
 import wealthBridge from "../../../../app/images/wealthbridge.png";
 import ParallaxMockup from "./Mockup";
@@ -47,6 +47,14 @@ const projects: projectType[] = [
     title: "TechNova Summit",
     description:
       "TechNova is a dynamic platform for tech enthusiasts to connect, learn, and innovate. We empower individuals to unlock their potential, spark creativity, and shape the future of technology in Africa.",
+  },
+  {
+    type: "real-world",
+    link: "https://olamidefamojuro.com",
+    image: fame,
+    title: "Olamide's Portfolio",
+    description:
+      "Explore the portfolio of Olamide Henry Famojuro — Henry Fame — a passionate character artist skilled in modeling, sculpting, and texturing for games, films, and 3D prints.",
   },
   {
     type: "real-world",
@@ -131,14 +139,6 @@ const projects: projectType[] = [
     title: "Dove Hospital",
     description:
       "Dove Hospital is a medical center that provides healthcare services to patients. The website has been up since 2018, but it's currently 'on a break' because someone forgot to renew the hosting. Don't worry, it's not a medical emergency—just a digital one!",
-  },
-  {
-    type: "side",
-    link: "#",
-    image: fame,
-    title: "Henry Fame Portfolio",
-    description:
-      "Explore the portfolio of Olamide Henry Famojuro — Henry Fame — a passionate character artist skilled in modeling, sculpting, and texturing for games, films, and 3D prints.",
   },
   {
     type: "side",
