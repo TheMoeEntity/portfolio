@@ -9,8 +9,8 @@ const Goals = () => {
   const imageStyles: CSSProperties = {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    backgroundImage: `url('/moses-new.jpeg')`,
+    backgroundPosition: "top",
+    backgroundImage: `url('/profile_new.jpeg')`,
   };
 
   // Reference for in-view detection

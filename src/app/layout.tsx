@@ -13,7 +13,7 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-
+const ogImage = "https://www.mosesnwigberi.com/OG_image_new.jpeg";
 export const metadata: Metadata = {
   title: "Moses Chukwudi Nwigberi's Portfolio | Web Developer & Engineer",
   other: {
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     url: "https://www.mosesnwigberi.com",
     images: [
       {
-        url: "https://www.mosesnwigberi.com/moe-og-image.jpg",
+        url: ogImage,
         width: 1200,
         height: 630,
         alt: "Moses Chukwudi Nwigberi Portfolio",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: "Moses Chukwudi's Portfolio | Web Developer & Engineer ",
     description:
       "Explore Moses Chukwudi's web development projects, showcasing skills and professional work.",
-    images: ["https://www.mosesnwigberi.com/moe-og-image.jpg"], // Replace with a relevant image URL for Twitter Card
+    images: [ogImage], // Replace with a relevant image URL for Twitter Card
   },
 };
 
