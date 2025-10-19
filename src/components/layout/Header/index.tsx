@@ -36,7 +36,7 @@ const Header = () => {
           className="flex title-font font-medium mb-4 md:mb-0 pr-4"
           href="/"
         >
-          <span className="text-3xl">
+          <span className="text-3xl text-white">
             {"MO.E"} <span className="text-[#14AFF1] pl-1">{"/>"}</span>{" "}
           </span>
         </Link>
