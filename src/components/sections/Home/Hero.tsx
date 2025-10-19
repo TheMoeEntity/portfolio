@@ -8,7 +8,7 @@ import Loader from "@/components/shared/Loader";
 import { useState } from "react";
 import Goals from "./Goals";
 import { services } from "@/app/lib/constants";
-// import { useMousePosition } from "@/hooks/useMousePosition";
+
 const Hero = () => {
   // Variants for staggered text animation
   const containerVariants = {
@@ -36,9 +36,6 @@ const Hero = () => {
     setIsLoading(false); // Update loading state when loader finishes
   };
   const { theme } = useTheme();
-  // const { x, y } = useMousePosition();
-  // const [, setIsHovered] = useState<boolean>(false);
-  // const size = 40;
   const words = `I'm a full-stack developer based in Lagos, Nigeria, working with clients and teams from all over the world. I specialize in building beautiful, responsive, and high-performance web applications that deliver seamless user experiences. With a strong focus on frontend technologies and a solid foundation in backend development, I bring ideas to life by combining clean code, modern tools, and creative problem-solving.`;
   return (
     <>
@@ -85,108 +82,12 @@ const Hero = () => {
                 </motion.span>
               ))}
             </motion.p>
-
-            {/* <motion.p
-              className="font-normal leading-relaxed text-gray-400 lg:w-2/3"
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
-            >
-              {"I’m a ".split(" ").map((word, index) => (
-                <motion.span
-                  key={index}
-                  className="inline-block mr-1"
-                  variants={childVariants}
-                >
-                  {word}
-                </motion.span>
-              ))}
-              <Typewriter
-                repeatOnView={false}
-                text="full-stack developer"
-                delay={50}
-              />
-              {" based in Lagos, Nigeria, working with clients and teams from all over the world. I specialize in building "
-                .split(" ")
-                .map((word, index) => (
-                  <motion.span
-                    key={index}
-                    className="inline-block mr-1"
-                    variants={childVariants}
-                  >
-                    {word}
-                  </motion.span>
-                ))}
-              <Typewriter
-                repeatOnView={false}
-                text="beautiful, responsive, and high-performance web applications"
-                delay={50}
-              />
-              {" that deliver seamless user experiences. With a strong focus on "
-                .split(" ")
-                .map((word, index) => (
-                  <motion.span
-                    key={index}
-                    className="inline-block mr-1"
-                    variants={childVariants}
-                  >
-                    {word}
-                  </motion.span>
-                ))}
-              <Typewriter
-                text="frontend technologies"
-                repeatOnView={false}
-                delay={50}
-              />
-              {" and a solid foundation in ".split(" ").map((word, index) => (
-                <motion.span
-                  key={index}
-                  className="inline-block mr-1"
-                  variants={childVariants}
-                >
-                  {word}
-                </motion.span>
-              ))}
-              <Typewriter
-                repeatOnView={false}
-                text="backend development"
-                delay={50}
-              />
-              {", I bring ideas to life by combining "
-                .split(" ")
-                .map((word, index) => (
-                  <motion.span
-                    key={index}
-                    className="inline-block mr-1"
-                    variants={childVariants}
-                  >
-                    {word}
-                  </motion.span>
-                ))}
-              <Typewriter
-                repeatOnView={false}
-                text="clean code, modern tools, and creative problem-solving"
-                delay={50}
-              />
-              {".".split(" ").map((word, index) => (
-                <motion.span
-                  key={index}
-                  className="inline-block mr-1"
-                  variants={childVariants}
-                >
-                  {word}
-                </motion.span>
-              ))}
-            </motion.p> */}
           </motion.div>
         )}
         <div className="w-full mt-10 flex flex-col md:flex-row md:justify-between">
           <article className="flex flex-1 flex-col gap-10">
             <p className="text-lg font-normal">
               Currently available for new projects <br />{" "}
-              {/* <a className="font-bold" href="mailto:mosesnwigberi@gmail.com">
-                Send me an email ↗{" "}
-              </a> */}
               <a
                 className="font-bold underline underline-offset-4 hover:text-[#14AFF1] transition"
                 href="mailto:contact@mosesnwigberi.com?subject=Let's%20Connect&body=Hi%20Moses,"
@@ -194,29 +95,6 @@ const Hero = () => {
                 Send me an email ↗
               </a>
             </p>
-            {/* <div className="flex md:hidden lg:hidden flex-col gap-10 w-full">
-              <motion.div
-                className="text-lg md:text-2xl gap-7 items-center flex mt-2 "
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
-                <span className="w-[150px] min-w-[150px] relative h-[100px]">
-                  <Image
-                    src={years}
-                    alt="7 years of experience"
-                    quality={100}
-                    sizes={"100vw"}
-                    className="object-contain w-[250px] h-[100px]"
-                  />
-                </span>
-                <b>OF WRITING CODE</b>
-              </motion.div>
-
-              <div>
-                <Brands />
-              </div>
-            </div> */}
           </article>
           <div className="text-right text-lg mt-10 lg:text-left">
             <b id="services">Services:</b>

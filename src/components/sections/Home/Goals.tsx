@@ -55,12 +55,6 @@ const Goals = () => {
           className="min-w-[130px] rounded-full min-h-[130px] max-h-[130px] max-w-[130px]"
           style={{ ...imageStyles }}
           animate={{ scale: [0.9, 1] }}
-          //   transition={{
-          //     duration: 1,
-          //     ease: "easeInOut",
-          //     repeat: Infinity,
-          //     repeatType: "reverse",
-          //   }}
         ></motion.div>
 
         {/* Animated Text */}
@@ -82,7 +76,7 @@ const Goals = () => {
         </motion.div>
       </motion.div>
 
-      {/* Parallax Floating Circular Progress Card */}
+      {/* Parallax Floating Cirscular Progress Card */}
       <motion.div
         className="mt-10 md:absolute -bottom-10 md:bottom-0 right-0"
         style={{ y: parallaxY }} // Parallax effect on scroll

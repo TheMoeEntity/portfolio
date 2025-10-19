@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTheme } from "@/context/ThemeContext";
 import { Menu } from "lucide-react";
 import FloatingHeader from "@/components/shared/UI/FloatingHeader";
 
@@ -27,29 +26,9 @@ const Header = () => {
       });
     }
   };
-  // const text = "<MOE />"; // Text to animate
-  // const letters = text.split(""); // Split text into individual letters
-  // const letters = ["<", "M", "O", "E ", "‎ ", "/", ">"];
-
-  // Variants for staggered drop animation
-  // const containerVariants = {
-  //   hidden: { opacity: 0 },
-  //   visible: {
-  //     opacity: 1,
-  //     transition: {
-  //       staggerChildren: 0.45, // Delay between each letter
-  //     },
-  //   },
-  // };
-
-  // const letterVariants = {
-  //   hidden: { opacity: 0, y: -50 }, // Start above
-  //   visible: { opacity: 1, y: 0 }, // Drop to original position
-  // };
-  const { theme } = useTheme();
   return (
     <header
-      className={`fixed z-[11] w-full bg-[#110f10] md:static font-[family-name:var(--font-geist-sans)] ${theme === "light" ? "text-[#110f10]" : "text-white"}  body-font`}
+      className={`fixed z-[11] w-full bg-[#110f10] md:static font-[family-name:var(--font-geist-sans)] text-[#110f10] body-font`}
     >
       <FloatingHeader />
       <div className="container mx-auto items-center py-6 flex md:py-7 px-5 md:flex-row xl:px-8">
@@ -60,25 +39,7 @@ const Header = () => {
           <span className="text-3xl">
             {"MO.E"} <span className="text-[#14AFF1] pl-1">{"/>"}</span>{" "}
           </span>
-          {/* <motion.span
-            className="text-2xl md:text-3xl"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            {letters.map((letter, index) => (
-              <motion.span
-                key={index}
-                variants={letterVariants}
-                className="inline-block"
-              >
-                {letter}
-              </motion.span>
-            ))}
-          </motion.span> */}
         </Link>
-
-        {/* Hamburger / X Icon */}
         <button
           className={`text-white ${navbarOpen && "fixed right-8 top-12"} cursor-pointer z-[51] text-3xl leading-none border border-solid border-transparent  rounded bg-transparent block md:hidden outline-none focus:outline-none ml-auto pb-3`}
           type="button"
@@ -269,15 +230,6 @@ const Header = () => {
                     frameBorder="0"
                   ></iframe>
                 </div>
-                {/* <div className="mt-2 flex justify-end">
-                  <a
-                    href="/docs/Moe-resume.pdf"
-                    download="Moses Nwigberi's Resume.pdf"
-                    className="w-fit mt-8 px-4 py-2 font-semibold rounded-lg transition-colors"
-                  >
-                    <Download color="#14AFF1" />
-                  </a>
-                </div> */}
               </motion.div>
             </motion.div>
           )}
