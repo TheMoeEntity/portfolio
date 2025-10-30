@@ -24,7 +24,7 @@ export const Footer = () => {
                 href="mailto:contact@mosesnwigberi.com"
                 className="text-2xl block my-5 font-bold text-white"
               >
-                mosesnwigberi@gmail.com ↗
+                contact@mosesnwigberi.com ↗
               </a>
               <p className="text-gray-400 mt-5 block">
                 © {new Date().getFullYear()} MOSES CHUKWUDI NWIGBERI.
