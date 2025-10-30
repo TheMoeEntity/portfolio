@@ -32,7 +32,7 @@ A modern, responsive portfolio website showcasing my skills, projects, and profe
 📬 Contact Me
 Let's build something amazing together!
 
-Email: mosesnwigberi@gmail.com
+Email: contact@mosesnwigberi.com
 
 [Linkedin](https://wwww.linkedin.com/in/nwigberi-moses)
 
