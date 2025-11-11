@@ -225,7 +225,7 @@ const Header = () => {
                 </div>
                 <div className="h-[85vh] overflow-y-auto">
                   <iframe
-                    src="/docs/Moses Nwigberi Resume September-2025.pdf"
+                    src="/docs/Moses Nwigberi Resume November-2025.pdf"
                     className="w-full h-full"
                     frameBorder="0"
                   ></iframe>
