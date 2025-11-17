@@ -91,7 +91,7 @@ const Header = () => {
                     section === "View Resume" ? (
                       <motion.button
                         key={section}
-                        className="w-fit text-xl px-4 mt-12 py-2 bg-[#14AFF1] text-gray-800 font-semibold rounded-lg hover:bg-[#0F8AC0] transition-colors"
+                        className="w-fit text-xl px-4 mt-12 py-2 bg-[#(] text-gray-800 font-semibold rounded-lg hover:bg-[#0F8AC0] transition-colors"
                         onClick={() => {
                           toggleModal();
                           toggleNavbar();
@@ -110,7 +110,7 @@ const Header = () => {
                           toggleNavbar();
                           goToSection(section);
                         }}
-                        className="mr-6 w-fit text-4xl font-medium hover:text-[#14AFF1]"
+                        className="mr-6 w-fit text-[white!important] text-4xl font-medium hover:text-[#14AFF1]"
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -20 }}
