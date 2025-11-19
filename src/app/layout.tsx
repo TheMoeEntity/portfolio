@@ -22,15 +22,31 @@ export const metadata: Metadata = {
       "@type": "Person",
       name: "Moses Chukwudi Nwigberi",
       url: "https://www.mosesnwigberi.com",
+      image: ogImage,
       jobTitle: "Fullstack Web Developer",
       worksFor: {
         "@type": "Organization",
-        name: "VisCorner",
+        name: "WealthBridge Financial Group",
       },
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "University of Lagos",
+      },
+      skills: [
+        "Next.js",
+        "React",
+        "PHP",
+        "TypeScript",
+        "React",
+        "Tailwind CSS",
+        "Supabase",
+        "Node.js",
+      ],
       sameAs: [
         "https://www.linkedin.com/in/nwigberi-moses",
         "https://github.com/TheMoeEntity",
         "https://twitter.com/NMoses_",
+        "https://instagram.com/NC_Moses",
       ],
     }),
   },
@@ -42,8 +58,28 @@ export const metadata: Metadata = {
   },
   creator: "Moses Chukwudi Nwigberi",
   applicationName: "Moe's Portfolio",
-  keywords:
-    "Moses Chukwudi Nwigberi, Moses Nwigberi, web developer, portfolio, chemical engineering, software developer, full-stack developer, Next.js, TypeScript, Tailwind, projects",
+  metadataBase: new URL("https://www.mosesnwigberi.com"),
+  alternates: {
+    canonical: "https://www.mosesnwigberi.com",
+  },
+  category: "Portfolio",
+  publisher: "Moses Chukwudi Nwigberi",
+  referrer: "origin-when-cross-origin",
+  keywords: [
+    "Moses Chukwudi Nwigberi",
+    "Moses Nwigberi",
+    "Nwigberi Moses",
+    "Moe",
+    "Web Developer Lagos",
+    "Nigerian Web Developer",
+    "Fullstack Developer",
+    "Frontend Developer",
+    "Next.js Developer",
+    "TypeScript Developer",
+    "Tailwind Developer",
+    "Software Engineer Nigeria",
+    "Portfolio Website",
+  ],
   robots: "index, follow",
   openGraph: {
     type: "website",
@@ -52,6 +88,7 @@ export const metadata: Metadata = {
     description:
       "Building sleek UIs with Next.js & TypeScript. Explore Moses Chukwudi's web development projects, showcasing skills and professional work.",
     url: "https://www.mosesnwigberi.com",
+    locale: "en_US",
     images: [
       {
         url: ogImage,
@@ -61,9 +98,11 @@ export const metadata: Metadata = {
       },
     ], // Replace with a relevant image URL for Open Graph
   },
+
   twitter: {
     card: "summary_large_image",
     site: "@NMoses_",
+    creator: "@NMoses_",
     title: "Moses Chukwudi's Portfolio | Web Developer & Engineer ",
     description:
       "Explore Moses Chukwudi's web development projects, showcasing skills and professional work.",

@@ -30,7 +30,7 @@ const NotFound = () => {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "bottom left",
-    backgroundImage: `url('/moses-new.jpeg')`,
+    backgroundImage: `url('/profile.png')`,
   };
 
   // Parallax effect for the card

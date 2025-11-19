@@ -10,7 +10,7 @@ const Goals = () => {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "top",
-    backgroundImage: `url('/profile_new.jpeg')`,
+    backgroundImage: `url('/profile.png')`,
   };
 
   // Reference for in-view detection
