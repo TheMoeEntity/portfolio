@@ -29,7 +29,7 @@ const NotFound = () => {
   const imageStyles: CSSProperties = {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "bottom left",
+    backgroundPosition: "top",
     backgroundImage: `url('/profile.png')`,
   };
 
