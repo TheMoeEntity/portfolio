@@ -19,7 +19,7 @@ import technova from "../../../../app/images/technovasummit.png";
 import simulator from "../../../../app/images/viscorner-phone-mockup.png";
 import fame from "../../../../app/images/HenryFame.png";
 import studio55 from "../../../../app/images/studio55-mvp.png";
-// import wealthBridge from "../../../../app/images/wealthbridge.png";
+import wealthBridge from "../../../../app/images/WealthBridge_Holdings.png";
 import ParallaxMockup from "./Mockup";
 export type projectType = {
   link: string;
@@ -50,6 +50,16 @@ const projects: projectType[] = [
   },
   {
     type: "real-world",
+    link: "https://www.wealthbridge.com.ng",
+    image: wealthBridge,
+    newProject: true,
+    title: "WealthBridge Financial Holdings",
+    description: `
+    WealthBridge Financial Services Holdings Limited is a full-service financial group providing integrated solutions across the financial spectrum. We serve corporations, institutions, and high-net-worth individuals with tailored strategies that address funding, investment, advisory, and financial intelligence needs. Our approach combines deep market knowledge with operational expertise to help clients create, manage, and preserve value across asset classes and sectors.
+    `,
+  },
+  {
+    type: "real-world",
     link: "https://olamidefamojuro.com",
     image: fame,
     title: "Olamide's Portfolio",
@@ -64,16 +74,6 @@ const projects: projectType[] = [
     description:
       "At Studio55byMich, we capture the profound emotions of weddings and the essence of individual portraits, turning fleeting moments into timeless keepsakes. This is the MVP of the revamped website, and it is still under review, the old SquareSpace version is still live at <a class='underline' href='https://studio55byMich.com'>studio55byMich.com</a>.",
   },
-  // {
-  //   type: "side",
-  //   link: "https://www.wealthbridge-nine.vercel.app",
-  //   image: wealthBridge,
-  //   newProject: true,
-  //   title: "WealthBridge Financial Group",
-  //   description: `
-  //   WealthBridge Financial Services Holdings Limited is a full-service financial group providing integrated solutions across the financial spectrum. We serve corporations, institutions, and high-net-worth individuals with tailored strategies that address funding, investment, advisory, and financial intelligence needs. Our approach combines deep market knowledge with operational expertise to help clients create, manage, and preserve value across asset classes and sectors.
-  //   `,
-  // },
   {
     link: "https://beta.airtimeplus.ng",
     type: "real-world",
