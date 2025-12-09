@@ -20,6 +20,7 @@ import simulator from "../../../../app/images/viscorner-phone-mockup.png";
 import fame from "../../../../app/images/HenryFame.png";
 import studio55 from "../../../../app/images/studio55-mvp.png";
 import wealthBridge from "../../../../app/images/WealthBridge_Holdings.png";
+import elegantStores from "@/app/images/elegantStores.png";
 import ParallaxMockup from "./Mockup";
 export type projectType = {
   link: string;
@@ -47,6 +48,15 @@ const projects: projectType[] = [
     title: "TechNova Summit",
     description:
       "TechNova Africa's Web3 Carnival is more than just an event – it's a movement to position Africa at the forefront of blockchain innovation and decentralized technology",
+  },
+  {
+    type: "side",
+    link: "https://www.theelegantstores.vercel.app",
+    newProject: false,
+    image: elegantStores,
+    title: "The Elegant Stores",
+    description:
+      "It's an Ecommerce store I worked on in 2024. Saw a cool template online and decided to build it. It has all the cool fun stuff you'd expect from a store. Still a work in progress and I intend to add even cooler features like AI Chatbot, expanded backend with golang. Fingers crossed!",
   },
   {
     type: "real-world",
