@@ -46,7 +46,7 @@ const projects: projectType[] = [
     image: technova,
     title: "TechNova Summit",
     description:
-      "TechNova is a dynamic platform for tech enthusiasts to connect, learn, and innovate. We empower individuals to unlock their potential, spark creativity, and shape the future of technology in Africa.",
+      "TechNova Africa's Web3 Carnival is more than just an event – it's a movement to position Africa at the forefront of blockchain innovation and decentralized technology",
   },
   {
     type: "real-world",
