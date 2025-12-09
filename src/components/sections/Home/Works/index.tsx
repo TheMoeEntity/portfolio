@@ -51,7 +51,7 @@ const projects: projectType[] = [
   },
   {
     type: "side",
-    link: "https://www.theelegantstores.vercel.app",
+    link: "https://theelegantstores.vercel.app/",
     newProject: false,
     image: elegantStores,
     title: "The Elegant Stores",
