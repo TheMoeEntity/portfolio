@@ -60,7 +60,7 @@ const projects: projectType[] = [
   },
   {
     type: "real-world",
-    link: "https://www.wealthbridge.com.ng",
+    link: "https://wealthbridge.com.ng"
     image: wealthBridge,
     newProject: true,
     title: "WealthBridge Financial Holdings",
