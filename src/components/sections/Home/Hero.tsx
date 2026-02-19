@@ -90,7 +90,7 @@ const Hero = () => {
               Currently available for new projects <br />{" "}
               <a
                 className="font-bold underline underline-offset-4 hover:text-[#14AFF1] transition"
-                href="mailto:contact@mosesnwigberi.com?subject=Let's%20Connect&body=Hi%20Moses,"
+                href="mailto:mosesnwigberi@gmail.com?subject=Let's%20Connect&body=Hi%20Moses,"
               >
                 Send me an email ↗
               </a>
