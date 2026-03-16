@@ -41,7 +41,7 @@ const visCornerApp = {
 };
 const projects: projectType[] = [
   {
-    type: "side",
+    type: "real-woeld",
     link: "https://www.technovasummit.com",
     newProject: true,
     image: technova,
