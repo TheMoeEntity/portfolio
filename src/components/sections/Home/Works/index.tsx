@@ -47,7 +47,7 @@ const projects: projectType[] = [
     image: technova,
     title: "TechNova Summit",
     description:
-      "TechNova Africa's Web3 Carnival is more than just an event – it's a movement to position Africa at the forefront of blockchain innovation and decentralized technology",
+      "Born in South east Nigeria and rising from Ebonyi State and built with a continental vision, Technova Summit brings together students, professionals, creators, founders, institutions, and global ecosystem players to explore the technologies, ideas, and skills shaping the future of work and innovation in Africa.",
   },
   {
     type: "side",
