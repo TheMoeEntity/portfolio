@@ -41,7 +41,7 @@ const visCornerApp = {
 };
 const projects: projectType[] = [
   {
-    type: "real-woeld",
+    type: "real-world",
     link: "https://www.technovasummit.com",
     newProject: true,
     image: technova,
@@ -188,7 +188,7 @@ export default function Works() {
   const [filter, setFilter] = useState<"real-world" | "side">("real-world");
 
   const filteredProjects = projects.filter(
-    (project) => project.type === filter
+    (project) => project.type === filter,
   );
 
   return (
