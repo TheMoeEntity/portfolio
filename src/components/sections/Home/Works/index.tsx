@@ -126,14 +126,14 @@ const projects: projectType[] = [
     description:
       "ZStinger Inspections prioritizes client satisfaction and technological excellence by providing efficient aerial assessments across various industries.",
   },
-  {
-    type: "real-world",
-    link: "https://pepnops.com",
-    image: pepnops,
-    title: "PEPNOPS Inc.",
-    description:
-      "At Pepnops, Our product and services help streamline processes, remove administrative burdens, and pave your pathway to success.",
-  },
+  // {
+  //   type: "real-world",
+  //   link: "https://pepnops.com",
+  //   image: pepnops,
+  //   title: "PEPNOPS Inc.",
+  //   description:
+  //     "At Pepnops, Our product and services help streamline processes, remove administrative burdens, and pave your pathway to success.",
+  // },
   {
     type: "real-world",
     link: "https://onedivinesingularity.com",
