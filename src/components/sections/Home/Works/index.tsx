@@ -10,7 +10,7 @@ import nosrati from "../../../../app/images/nosrati.png";
 import konstruct from "../../../../app/images/konstruct.png";
 import moestores from "../../../../app/images/moestores.png";
 import tribu from "../../../../app/images/tribu-hotel.png";
-import pepnops from "../../../../app/images/pepnops-inc.png";
+import tastyc from "../../../../app/images/tastyc-admin.png";
 import aman from "../../../../app/images/aman-awards.png";
 import farzad from "../../../../app/images/farzads-blog.png";
 import viscorner from "../../../../app/images/viscorner-main.png";
@@ -48,6 +48,15 @@ const projects: projectType[] = [
     title: "TechNova Summit",
     description:
       "Born in South east Nigeria and rising from Ebonyi State and built with a continental vision, Technova Summit brings together students, professionals, creators, founders, institutions, and global ecosystem players to explore the technologies, ideas, and skills shaping the future of work and innovation in Africa.",
+  },
+  {
+    type: "side",
+    link: "https://tastyc.mosesnwigberi.com",
+    image: tastyc,
+    title: "TastyTreats Restaurant Platform",
+    description: `A production-grade restaurant operations platform built for real deployment. Tastyc covers the full restaurant stack — online ordering with Paystack payments, live kitchen display via Socket.IO, table reservations with smart capacity logic, QR code table ordering, 
+    loyalty points, and a complete admin dashboard with analytics. \n\n 
+    The backend is a standalone Node.js/Express API with custom JWT authentication, Redis caching, BullMQ background jobs, web push notifications, and Paystack webhook processing. Built as a sellable white-label product with a first-run onboarding wizard and demo mode for portfolio presentation`,
   },
   {
     type: "side",
