@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, ReactNode, useEffect } from "react";
+import { createContext, useContext, useState, ReactNode, useEffect, useLayoutEffect } from "react";
 
 type Theme = "dark" | "light";
 
@@ -12,31 +12,31 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>("dark");
-  const [isMounted, setIsMounted] = useState(false);
+  const [theme, setThemeState] = useState<Theme>("dark");
 
-  useEffect(() => {
-    // Check localStorage for saved theme preference
+  // Initialize theme from localStorage or system preference
+  useLayoutEffect(() => {
     const savedTheme = localStorage.getItem("theme") as Theme | null;
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     
     const initialTheme = savedTheme || (prefersDark ? "dark" : "dark");
-    setTheme(initialTheme);
-    setIsMounted(true);
+    setThemeState(initialTheme);
+    document.documentElement.setAttribute("data-theme", initialTheme);
   }, []);
 
-  const handleSetTheme = (newTheme: Theme) => {
-    setTheme(newTheme);
+  const setTheme = (newTheme: Theme) => {
+    setThemeState(newTheme);
     localStorage.setItem("theme", newTheme);
     document.documentElement.setAttribute("data-theme", newTheme);
   };
 
-  if (!isMounted) {
-    return <>{children}</>;
-  }
+  const contextValue: ThemeContextType = {
+    theme,
+    setTheme,
+  };
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme: handleSetTheme }}>
+    <ThemeContext.Provider value={contextValue}>
       {children}
     </ThemeContext.Provider>
   );
