@@ -6,36 +6,22 @@ const About = () => {
   return (
     <section className="container flex flex-col gap-10 mt-20 mx-auto max-w-5xl md:p-3">
       <p className="text-2xl md:text-4xl font-medium">
-        {` I've`} spent the last decade building digital wonders for tech,
-        e-commerce, and medical companies—because who{` doesn’t`} love a good
-        challenge? From crafting pixel-perfect UIs to wrestling with backend
-        APIs, {`I've`} done it all. My superpower? Turning coffee into clean,
-        maintainable code (mostly TypeScript, because{" "}
-        <span className="text-[#14AFF1]">any</span> is not my type).
+        I've spent the better part of a decade building digital products for fintech, e-commerce, and real estate companies — because apparently I enjoy pain, deadlines, and the occasional database migration at 11pm.
+        From architecting multi-tenant SaaS backends to crafting UIs that don't make designers cry, I've done both sides of the stack. My superpower? Turning coffee into clean, maintainable TypeScript — on the frontend and the backend — because <span className="text-[#14AFF1]">any</span> is not my type, and neither is spaghetti <span className="text-[#14AFF1]">SQL</span>
       </p>
       <p className="md:text-3xl text-[#8D8D8D] font-medium">
-        When I’m not geeking out over the latest Next.js feature or debating why
-        Tailwind CSS is the best thing since sliced bread, you’ll find me
-        outdoors chasing my kids around, pretending to be a FIFA pro (spoiler:
-        I’m not), or binge-reading frontend blogs to stay ahead of the curve.
-        And if there’s a Barcelona match on, drop everything—I’ll be glued to
-        the screen, cheering on the Blaugrana and dreaming of the day I can
-        watch Yamal’s magic live at Camp Nou or estadio mon-juice (or whatever
-        they’re calling it now).
+        When I'm not debating whether to use Prisma or Drizzle ORM, you'll find me outdoors chasing my kids around (I have three, send help), pretending to be a FIFA pro (spoiler: still not), or down a rabbit hole on distributed systems at 1am because one blog post led to another. And if there's a Barcelona match on — drop everything. I'll be glued to the screen watching Yamal make defenders question their life choices, dreaming of the day I catch it live at the Spotify Camp Nou.
       </p>
       <p className="md:text-3xl font-normal text-gray-300">
-        I’ve had the privilege of working with brands both in Nigeria and the
-        US, which basically means I can debug code while eating jollof rice and
-        drinking a pumpkin spice latte. Whether it’s solving complex problems or
-        arguing about semicolons, I bring a mix of simplicity, and attention to
-        detail to everything I do.
+        I've built for brands in Nigeria and the US, which basically means I can design a stateful auth flow while eating jollof rice — and explain it in plain English over a pumpkin spice latte.
+        Whether it's a real-time WebSocket system, an argument about semicolons, or even a simple portfolio website for your brand — I bring simplicity, structure, and an embarrassing attention to detail to everything I do.
       </p>
       <p>
         <Typewriter
           repeatOnView={true}
           text="Oh, and if you need
         someone to explain why <code>useEffect</code> is both a blessing and a
-        curse, I’m your guy."
+        curse and why your Redis cache is lying to you — I’m your guy."
           delay={50}
         />
       </p>
