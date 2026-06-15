@@ -42,12 +42,12 @@ const Header = () => {
           className="flex title-font font-medium mb-4 md:mb-0 pr-4"
           href="/"
         >
-          <span className="text-3xl text-white">
+          <span className={`text-3xl ${theme === "light" ? "text-[#110f10]" : "text-white"}`}>
             {"MO.E"} <span className="text-[#14AFF1] pl-1">{"/>"}</span>{" "}
           </span>
         </Link>
         <button
-          className={`text-white ${navbarOpen && "fixed right-8 top-12"} cursor-pointer z-[51] text-3xl leading-none border border-solid border-transparent  rounded bg-transparent block md:hidden outline-none focus:outline-none ml-auto pb-3`}
+          className={`${theme === "light" ? "text-[#110f10]" : "text-white"} ${navbarOpen && "fixed right-8 top-12"} cursor-pointer z-[51] text-3xl leading-none border border-solid border-transparent  rounded bg-transparent block md:hidden outline-none focus:outline-none ml-auto pb-3`}
           type="button"
           title="Toggle Navigation Menu"
           onClick={toggleNavbar}
@@ -60,7 +60,7 @@ const Header = () => {
               height="24"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="white"
+              stroke={theme === "light" ? "#110f10" : "white"}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -133,7 +133,7 @@ const Header = () => {
 
                   {/* Floating "MOE" Effect */}
                   <motion.span
-                    className="text-6xl absolute bottom-3 text-[#DDDDDD] right-4"
+                    className={`text-6xl absolute bottom-3 right-4 ${theme === "light" ? "text-[#AABBCC]" : "text-[#DDDDDD]"}`}
                     initial={{ y: 0 }}
                     animate={{ y: [0, -5, 0] }}
                     transition={{
@@ -215,7 +215,7 @@ const Header = () => {
                     Moses Nwigberi&#39;s Resume
                   </h2>
                   <button
-                    className="text-white hover:text-[#14AFF1]"
+                    className={`${theme === "light" ? "text-[#110f10]" : "text-white"} hover:text-[#14AFF1]`}
                     onClick={toggleModal}
                   >
                     <svg

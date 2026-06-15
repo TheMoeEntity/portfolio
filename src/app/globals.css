@@ -3,15 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  /* --foreground: #171717; */
+  --background: #EBF0F8;
   --foreground: #110f10;
   --primary: #14AFF1;
   --secondary: #0F8AC0;
 }
 
 [data-theme="light"] {
-  --background: #F6F7FB;
+  --background: #EBF0F8;
   --foreground: #110f10;
   --primary: #14AFF1;
   --secondary: #0F8AC0;
@@ -25,8 +24,8 @@
 }
 
 body {
-  background: var(--foreground);
-  color: var(--background);
+  background: var(--background);
+  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
@@ -36,6 +35,15 @@ body {
   margin: 20px auto;
   border-radius: 9999px;
   background: #242223 !important;
+}
+
+/* Light mode overrides for components that can't be made theme-aware via JS */
+[data-theme="light"] .framer-w6mgug {
+  background-color: rgba(215, 225, 248, 0.88);
+}
+
+[data-theme="light"] .testimonial-body b {
+  color: #1a5cb8;
 }
 @layer utilities {
   .text-balance {

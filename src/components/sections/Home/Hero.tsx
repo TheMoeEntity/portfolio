@@ -60,7 +60,7 @@ const Hero = () => {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="font-normal leading-relaxed text-gray-400 lg:w-2/3"
+              className={`font-normal leading-relaxed lg:w-2/3 ${theme === "light" ? "text-gray-600" : "text-gray-400"}`}
             >
               {HERO_SUBTEXT}
             </motion.p>

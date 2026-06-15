@@ -22,6 +22,7 @@ import studio55 from "../../../../app/images/studio55-mvp.png";
 import wealthBridge from "../../../../app/images/WealthBridge_Holdings.png";
 import elegantStores from "@/app/images/elegantStores.png";
 import ParallaxMockup from "./Mockup";
+import { useTheme } from "@/context/ThemeContext";
 export type projectType = {
   link: string;
   type: "real-world" | "side";
@@ -195,6 +196,7 @@ const projects: projectType[] = [
 
 export default function Works() {
   const [filter, setFilter] = useState<"real-world" | "side">("real-world");
+  const { theme } = useTheme();
 
   const filteredProjects = projects.filter(
     (project) => project.type === filter,
@@ -211,7 +213,7 @@ export default function Works() {
 
       {/* Filter Buttons */}
       <motion.div
-        className="text-2xl w-fit mx-auto my-10 my=0 rounded-full py-2 bg-[#1B191A] top-20 xl:right-10 lg:rotate-12 gap-4 items-center flex mt-2 mb-5 justify-center xl:justify-start xl:absolute"
+        className={`text-2xl w-fit mx-auto my-10 my=0 rounded-full py-2 top-20 xl:right-10 lg:rotate-12 gap-4 items-center flex mt-2 mb-5 justify-center xl:justify-start xl:absolute ${theme === "light" ? "bg-[#D7E0F2]" : "bg-[#1B191A]"}`}
         initial={{ opacity: 0, y: 20, x: -20 }}
         whileInView={{ opacity: 1, y: 0, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -221,7 +223,7 @@ export default function Works() {
           className={`px-6 py-2 md:text-xl text-sm rounded-full transition-colors duration-700 ${
             filter === "real-world"
               ? "bg-[#14AFF1] text-white"
-              : "bg-transparent text-white"
+              : `bg-transparent ${theme === "light" ? "text-[#110f10]" : "text-white"}`
           }`}
         >
           For Brands
@@ -231,7 +233,7 @@ export default function Works() {
           className={`px-6 py-2 md:text-xl text-sm rounded-full transition-colors duration-700 ${
             filter === "side"
               ? "bg-[#14AFF1] text-white"
-              : "bg-transparent text-white"
+              : `bg-transparent ${theme === "light" ? "text-[#110f10]" : "text-white"}`
           }`}
         >
           Side Projects
@@ -257,7 +259,7 @@ export default function Works() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <motion.div
-                className={`relative ${project.className} p-3 bg-[#1B191A] md:p-5 w-full h-auto overflow-hidden rounded-lg`}
+                className={`relative ${project.className} p-3 md:p-5 w-full h-auto overflow-hidden rounded-lg ${theme === "light" ? "bg-[#D7E0F2]" : "bg-[#1B191A]"}`}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
@@ -284,7 +286,7 @@ export default function Works() {
                   {project.title}
                 </a>
                 <p
-                  className="text-[#F0EDF0] text-sm"
+                  className={`text-sm ${theme === "light" ? "text-[#3D3B52]" : "text-[#F0EDF0]"}`}
                   dangerouslySetInnerHTML={{ __html: project.description }}
                 />
               </div>

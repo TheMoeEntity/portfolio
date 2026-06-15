@@ -1,8 +1,13 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { DEV_OBJECT_SKILLS } from "@/app/lib/constants";
+import { useTheme } from "@/context/ThemeContext";
 
 const Code = () => {
+  const { theme } = useTheme();
+  const id = theme === "light" ? "text-[#110f10]" : "text-white";
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
@@ -13,26 +18,26 @@ const Code = () => {
       <code className="font-mono">
         <div>
           <span className="text-pink-500 mr-2">const</span>
-          <span className="text-white mr-2">mosesNwigberi</span>
+          <span className={`${id} mr-2`}>mosesNwigberi</span>
           <span className="text-pink-500 mr-2">=</span>
           <span className="text-gray-400">{"{"}</span>
         </div>
 
         <div>
-          <span className="text-white ml-8 mr-2">name:</span>
+          <span className={`${id} ml-8 mr-2`}>name:</span>
           <span className="text-amber-300">&#39;Nwigberi Moses&#39;</span>
           <span className="text-gray-400">,</span>
         </div>
 
         <div>
-          <span className="text-white ml-8 mr-2">nickname:</span>
+          <span className={`${id} ml-8 mr-2`}>nickname:</span>
           <span className="text-amber-300">&#39;Moe&#39;</span>
           <span className="text-gray-400">,</span>
         </div>
 
         {/* Skills driven by constants — edit in one place */}
         <div>
-          <span className="text-white ml-8 mr-2">skills:</span>
+          <span className={`${id} ml-8 mr-2`}>skills:</span>
           <span className="text-gray-400">[</span>
           {DEV_OBJECT_SKILLS.map((skill, i) => (
             <span key={skill} className="block sm:inline ml-10 md:ml-0">
@@ -46,37 +51,37 @@ const Code = () => {
         </div>
 
         <div>
-          <span className="text-white ml-8 mr-2">currentlyBuilding:</span>
+          <span className={`${id} ml-8 mr-2`}>currentlyBuilding:</span>
           <span className="text-amber-300">&#39;SlotWise&#39;</span>
           <span className="text-gray-400">,</span>
         </div>
 
         <div>
-          <span className="text-white ml-8 mr-2">hardWorker:</span>
+          <span className={`${id} ml-8 mr-2`}>hardWorker:</span>
           <span className="text-orange-400">true</span>
           <span className="text-gray-400">,</span>
         </div>
 
         <div>
-          <span className="text-white ml-8 mr-2">problemSolver:</span>
+          <span className={`${id} ml-8 mr-2`}>problemSolver:</span>
           <span className="text-orange-400">true</span>
           <span className="text-gray-400">,</span>
         </div>
 
         <div>
-          <span className="text-white ml-8 mr-2">yearsOfExperience:</span>
+          <span className={`${id} ml-8 mr-2`}>yearsOfExperience:</span>
           <span className="text-orange-400">5</span>
           <span className="text-gray-400">,</span>
         </div>
 
         <div>
-          <span className="text-white ml-8 mr-2">isBarcelonaFan:</span>
+          <span className={`${id} ml-8 mr-2`}>isBarcelonaFan:</span>
           <span className="text-orange-400">true</span>
           <span className="text-gray-400">,</span>
         </div>
 
         <div>
-          <span className="text-white ml-8 mr-2">hireable:</span>
+          <span className={`${id} ml-8 mr-2`}>hireable:</span>
           <span className="text-gray-400">()={"> {"}</span>
         </div>
         <div>
@@ -85,24 +90,24 @@ const Code = () => {
         </div>
         <div>
           <span className="text-cyan-400 ml-20">this.</span>
-          <span className="text-white mr-2">hardWorker</span>
+          <span className={`${id} mr-2`}>hardWorker</span>
           <span className="text-amber-300">&&</span>
         </div>
         <div>
           <span className="text-cyan-400 ml-20">this.</span>
-          <span className="text-white mr-2">problemSolver</span>
+          <span className={`${id} mr-2`}>problemSolver</span>
           <span className="text-amber-300">&&</span>
         </div>
         <div>
           <span className="text-cyan-400 ml-20">this.</span>
-          <span className="text-white mr-2">skills.length</span>
+          <span className={`${id} mr-2`}>skills.length</span>
           <span className="text-amber-300 mr-2">&gt;=</span>
           <span className="text-orange-400">5</span>
           <span className="text-amber-300"> &&</span>
         </div>
         <div>
           <span className="text-cyan-400 ml-20">this.</span>
-          <span className="text-white mr-2">yearsOfExperience</span>
+          <span className={`${id} mr-2`}>yearsOfExperience</span>
           <span className="text-amber-300 mr-2">&gt;=</span>
           <span className="text-orange-400">5</span>
         </div>

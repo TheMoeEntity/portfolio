@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { useTheme } from "@/context/ThemeContext";
 
 interface CircularProgressProps {
   progress: number; // Progress in percentage (0 - 100)
@@ -11,6 +13,7 @@ export const CircularProgress: React.FC<CircularProgressProps> = ({
   size = 150,
   strokeWidth = 4,
 }) => {
+  const { theme } = useTheme();
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - (progress / 100) * circumference;
@@ -50,7 +53,7 @@ export const CircularProgress: React.FC<CircularProgressProps> = ({
         dy=".3em"
         fontSize="16px"
         fontWeight="bold"
-        fill="white"
+        fill={theme === "light" ? "#110f10" : "white"}
       >
         About Me
       </text>

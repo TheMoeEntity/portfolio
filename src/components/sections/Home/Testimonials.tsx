@@ -7,6 +7,7 @@ import {
   useSpring,
 } from "framer-motion";
 import { CSSProperties, useEffect, useRef, useState } from "react";
+import { useTheme } from "@/context/ThemeContext";
 
 // Define the type for a testimonial
 interface Testimonial {
@@ -26,6 +27,7 @@ interface TestimonialCardProps {
   mouseX: MotionValue<number>;
   mouseY: MotionValue<number>;
   index: number;
+  theme: "dark" | "light";
 }
 
 // Testimonial data
@@ -87,6 +89,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   mouseX,
   mouseY,
   index,
+  theme,
 }) => {
   // Apply spring smoothing to mouseX and mouseY with unique stiffness and damping
   const smoothMouseX = useSpring(mouseX, {
@@ -120,7 +123,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   return (
     <motion.div
       className={
-        "md:absolute shadow-lg my-5 md:my-0 rounded-lg bg-[#191718] text-[#5D5B5F] px-7 py-6 flex flex-col gap-5 w-auto md:w-[380px] " +
+        `md:absolute shadow-lg my-5 md:my-0 rounded-lg px-7 py-6 flex flex-col gap-5 w-auto md:w-[380px] ${theme === "light" ? "bg-[#D7E0F2] text-[#3D3B52]" : "bg-[#191718] text-[#5D5B5F]"} ` +
         testimonial.position.x +
         " " +
         testimonial.position.y
@@ -136,12 +139,12 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           style={{ ...imageStyles }}
         ></div>
         <div className="flex flex-col gap-1">
-          <h1 className="text-lg font-bold text-white">{testimonial.name}</h1>
-          <p className="text-sm text-gray-400">{testimonial.role}</p>
+          <h1 className={`text-lg font-bold ${theme === "light" ? "text-[#110f10]" : "text-white"}`}>{testimonial.name}</h1>
+          <p className={`text-sm ${theme === "light" ? "text-gray-600" : "text-gray-400"}`}>{testimonial.role}</p>
         </div>
       </div>
       <p
-        className="mt-2 text-sm text-gray-400"
+        className={`testimonial-body mt-2 text-sm ${theme === "light" ? "text-gray-700" : "text-gray-400"}`}
         dangerouslySetInnerHTML={{ __html: testimonial.text }}
       />
     </motion.div>
@@ -150,6 +153,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
 // Testimonials Component
 const Testimonials: React.FC = () => {
+  const { theme } = useTheme();
   const containerRef = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -192,7 +196,7 @@ const Testimonials: React.FC = () => {
       ref={containerRef}
       className="relative xl:mt-20 min-h-screen md:min-h-[1100px] xl:min-h-screen w-full container mx-auto"
     >
-      <div className="md:absolute py-10 mb-2 text-center text-4xl font-bold tracking-tighter text-white md:text-6xl top-1/2 left-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
+      <div className={`md:absolute py-10 mb-2 text-center text-4xl font-bold tracking-tighter md:text-6xl top-1/2 left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 ${theme === "light" ? "text-[#110f10]" : "text-white"}`}>
         People Seem to Like Me (Mostly ☻)
       </div>
       {testimonials.map((testimonial, index) => (
@@ -202,6 +206,7 @@ const Testimonials: React.FC = () => {
           mouseX={mouseX}
           mouseY={mouseY}
           index={index}
+          theme={theme}
         />
       ))}
     </div>

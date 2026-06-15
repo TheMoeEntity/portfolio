@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { useTheme } from "@/context/ThemeContext";
 
 const FloatingHeader = () => {
+  const { theme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -24,12 +26,12 @@ const FloatingHeader = () => {
     >
       <div className="flex flex-col items-start">
         <div className="flex flex-col justify-start flex-shrink-0">
-          <p className="font-semibold whitespace-nowrap text-white text-left tracking-tight">
+          <p className={`font-semibold whitespace-nowrap text-left tracking-tight ${theme === "light" ? "text-[#110f10]" : "text-white"}`}>
             Moses Nwigberi
           </p>
         </div>
         <div className="flex flex-col justify-start flex-shrink-0">
-          <p className="text-sm whitespace-nowrap text-white tracking-tight">
+          <p className={`text-sm whitespace-nowrap tracking-tight ${theme === "light" ? "text-[#3D3B52]" : "text-white"}`}>
             Fullstack Developer
           </p>
         </div>
@@ -37,7 +39,7 @@ const FloatingHeader = () => {
       <a
         href="mailto:mosesnwigberi@gmail.com"
         rel="noopener"
-        className="mt-2 inline-block whitespace-nowrap duration-500 bg-[#1D1D1D] text-white px-4 py-2 transition-colors rounded-md text-center hover:bg-[#14AFF1]"
+        className={`mt-2 inline-block whitespace-nowrap duration-500 px-4 py-2 transition-colors rounded-md text-center hover:bg-[#14AFF1] ${theme === "light" ? "bg-[#C8D4EC] text-[#110f10] hover:text-white" : "bg-[#1D1D1D] text-white"}`}
       >
         Get in Touch
       </a>
