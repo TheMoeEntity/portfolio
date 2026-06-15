@@ -4,7 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import dynamic from "next/dynamic";
 import { useTheme } from "@/context/ThemeContext";
-// import { ThemeSwitcher } from "../shared/ThemeSwitcher";
+import { ThemeSwitcher } from "../shared/ThemeSwitcher";
 const Cursor = dynamic(() => import("../shared/AnimatedCursor"), {
   ssr: false,
 });
@@ -18,18 +18,7 @@ type Props = {
 const AppLayout = (props: Props) => {
   const { theme } = useTheme();
   const [scrollProgress, setScrollProgress] = useState(0);
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrollY = window.scrollY;
-  //     if (scrollY > 100) {
-  //       setTheme("dark");
-  //     } else {
-  //       setTheme("light");
-  //     }
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -43,9 +32,11 @@ const AppLayout = (props: Props) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <div
       className={`transition-colors ease duration-500 ${theme === "light" ? "bg-[#F6F7FB] text-[#110f10]" : "bg-[#110f10] text-[#ffffff]"}`}
+      data-theme={theme}
     >
       {/* Scroll Progress Bar */}
       <div
@@ -58,7 +49,7 @@ const AppLayout = (props: Props) => {
 
       {props.children}
       {/* <ScrollToTop /> */}
-      {/* <ThemeSwitcher /> */}
+      <ThemeSwitcher />
       <Cursor />
       <Footer />
     </div>

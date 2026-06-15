@@ -5,8 +5,10 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu } from "lucide-react";
 import FloatingHeader from "@/components/shared/UI/FloatingHeader";
+import { useTheme } from "@/context/ThemeContext";
 
 const Header = () => {
+  const { theme } = useTheme();
   const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
@@ -28,7 +30,11 @@ const Header = () => {
   };
   return (
     <header
-      className={`fixed z-[11] w-full bg-[#110f10] md:static font-[family-name:var(--font-geist-sans)] text-[#110f10] body-font`}
+      className={`fixed z-[11] w-full md:static font-[family-name:var(--font-geist-sans)] body-font transition-colors duration-500 ${
+        theme === "light"
+          ? "bg-[#F6F7FB] text-[#110f10]"
+          : "bg-[#110f10] text-[#ffffff]"
+      }`}
     >
       <FloatingHeader />
       <div className="container mx-auto items-center py-6 flex md:py-7 px-5 md:flex-row xl:px-8">
@@ -73,7 +79,9 @@ const Header = () => {
         <AnimatePresence>
           {navbarOpen && (
             <motion.div
-              className="fixed inset-0 bg-[#121212] z-50 md:hidden"
+              className={`fixed inset-0 z-50 md:hidden transition-colors duration-500 ${
+                theme === "light" ? "bg-[#F6F7FB]" : "bg-[#121212]"
+              }`}
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
@@ -110,7 +118,9 @@ const Header = () => {
                           toggleNavbar();
                           goToSection(section);
                         }}
-                        className="mr-6 w-fit text-[white!important] text-4xl font-medium hover:text-[#14AFF1]"
+                        className={`mr-6 w-fit text-4xl font-medium hover:text-[#14AFF1] ${
+                          theme === "light" ? "text-[#110f10]" : "text-white"
+                        }`}
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -20 }}
@@ -191,12 +201,14 @@ const Header = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <motion.div
-                className="bg-[#121212] rounded-lg py-6 px-2 w-full max-w-3xl max-h-[95vh] overflow-y-auto"
-                initial={{ scale: 0.8 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.8 }}
-              >
+            <motion.div
+              className={`rounded-lg py-6 px-2 w-full max-w-3xl max-h-[95vh] overflow-y-auto transition-colors duration-500 ${
+                theme === "light" ? "bg-white" : "bg-[#121212]"
+              }`}
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.8 }}
+            >
                 <div className="flex px-5 justify-between items-center mb-4">
                   <h2 className="text-2xl font-semibold">
                     {" "}
