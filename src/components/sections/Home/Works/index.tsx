@@ -21,6 +21,8 @@ import fame from "../../../../app/images/HenryFame.png";
 import studio55 from "../../../../app/images/studio55-mvp.png";
 import wealthBridge from "../../../../app/images/WealthBridge_Holdings.png";
 import elegantStores from "@/app/images/elegantStores.png";
+import michaelIfeomaWeddingWebsite from "@/app/images/ifeoma-michael.png";
+
 import ParallaxMockup from "./Mockup";
 export type projectType = {
   link: string;
@@ -48,6 +50,14 @@ const projects: projectType[] = [
     title: "TechNova Summit",
     description:
       "Born in South east Nigeria and rising from Ebonyi State and built with a continental vision, Technova Summit brings together students, professionals, creators, founders, institutions, and global ecosystem players to explore the technologies, ideas, and skills shaping the future of work and innovation in Africa.",
+  },
+  {
+    type: "side",
+    link: "https://www.ifeomamichael.com",
+    image: michaelIfeomaWeddingWebsite,
+    title: "Ifeoma and Michael",
+    description:
+      "Wedding bellsssss! 🥂 Love is beautiful and deserves to be celebrated. My job was bringing that vision to life on the web and handling the underlying functionality, from RSVP flows to automated email confirmation, moderation workflows, and rate limiting.",
   },
   {
     type: "side",
